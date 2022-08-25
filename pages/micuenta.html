@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/logo/favicon.png">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>ARACNE.</title>
+</head>
+<body>
+    <div class="gridConteiner">
+        <header class="flexmediaquerie">
+            <nav class="navegador">
+                <div class="gridlogo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo/logoempresa.png" alt="logo pagina web">
+                    </a>
+                </div>
+                <ul class="gridNavIzq">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./productos.html">Productos</a></li>
+                    <li><a href="./servicios.html">Servicios</a></li>
+                    <li><a href="./giftcard.html">Tarjeta regalo</a></li>
+                </ul>
+                <ul class="row-reverse gridNavDer">
+                    <li><a href="#" class="active">Mi cuenta</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="sizeForm backgroundImg gridMainAccount flexmediaquerie">
+            <div class="accountDecoration gridAccountLeft">
+                <h1>Mi cuenta.</h1>
+                <p><a href="#">Ya tengo una cuenta.</a></p>
+            </div>
+            <div class="accountDecoration accountFlex m-30 p-10">
+                <h2>Crear una cuenta</h2>
+                <form action="#">
+                    <div class="user-details flexmediaquerie">
+                        <div class="input-box">
+                            <label for="name" class="form-input">Nombre:</label>
+                            <input type="name" placeholder="Nombre" class="account-input">
+                        </div>
+                        <div class="input-box">
+                            <label for="name" class="form-input">Apellido:</label>
+                            <input type="name" placeholder="Apellido" class="account-input">
+                        </div>
+                        <div class="input-box">
+                            <label for="email" class="form-input">e-mail:</label>
+                            <input type="email" placeholder="E-mail" class="account-input">
+                        </div>
+                        <div class="input-box">
+                            <label for="password" class="form-input">Contraseña:</label>
+                            <input type="password" placeholder="Contraseña" class="account-input">
+                        </div>
+                        <div class="input-box">
+                            <label for="date" class="form-input">Nacimiento:</label>
+                            <input type="date" class="account-input">
+                        </div>
+                    </div>
+                    <div class="gender-datails flexmediaquerie">
+                        <label for="gender" class="form-input">Género:</label>
+                        <div class="displayInput">
+                            <p>Masculino</p>
+                            <input type="radio" name="gender" value="masculino">
+                        </div>
+                        <div class="displayInput">
+                            <p>Femenino</p>
+                            <input type="radio" name="gender" value="femenino">
+                        </div>
+                        <div class="displayInput">
+                            <p>No binario</p>
+                            <input type="radio" name="gender" value="nobinario">
+                        </div>
+                    </div>
+                    <div class="checkboxDecoration flexcheckbox flexmediaquerie">
+                        <div>
+                            <input type="checkbox" name="acepta" value="1">
+                            <label for="acepta" class="form-input">Suscribete a nuestro boletín</label>
+                        </div>
+                        <input type="submit" value="Crear cuenta" class="accountBtn">
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <section class="contactDecoration">
+                <div>
+                    <h3>Contacto</h3>
+                    <p>Envianos un e-mail: <a href="mailto:vitgug2001@gmail.com">vitgug2001@gmail.com</a></p>
+                    <p><a href=" https://wa.me/1130862526"><img src="../assets/images/logo/wppicon.png" alt="icono de whatsapp">(+54) 011 3086-2526</a></p>
+                </div>
+            </section>
+            <section class="contactDecoration">
+                <h3>Suscribete a nuestro boletín:</h3>
+                <form action="#">
+                    <label for="Your email">Tu e-mail</label>
+                    <input type="email" name="Your email" placeholder="email" id="email">
+                    <input type="submit" value="Enviar">
+                </form>
+            </section>
+            <div class="contactDecoration flexEndFooter">
+                <a href="#">
+                    <img src="../assets/images/logo/logoempresa.png" alt="logo pagina web">
+                </a>
+                <p>&copy;ARACNE. 2022 Todos los derechos reservados</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
