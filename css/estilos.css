@@ -141,7 +141,18 @@ footer{
     color: black;
     font-size: 3rem;
 }
-@keyframes gradiente{
+.gridThirthSection p {
+    background: linear-gradient(
+    35deg,
+    rgba(255, 200, 249, 1) 25%,
+    rgba(75, 254, 222, 1) 25%,
+    rgba(75, 254, 222, 1) 71%,
+    rgba(0, 0, 0, 0) 71%,
+    rgba(69, 74, 187, 1) 71%,
+    rgba(69, 74, 187, 1) 100%
+    );
+}
+/* @keyframes gradiente{
     0%{background-image: radial-gradient(#3c3939, black);}
     100%{background-color: black; color: white;}
 } 
@@ -150,7 +161,7 @@ footer{
     animation-duration: 10s;
     animation-delay: 2s;
     animation-iteration-count: infinite;
-}
+} */
 /* Estilos para giftcard.html */
 .flexUl{
     display: flex;
@@ -407,7 +418,6 @@ section select:hover{
         margin-bottom: 20px;
     }
     /*grid index*/
-    
     .gridFirstSection{
         display: grid;
         grid-template-areas:
@@ -643,6 +653,14 @@ section select:hover{
     }
     /*fin grid en giftcard*/
     /*estilos para micuenta*/
+    .boxglass {
+        background-color: rgba(0, 0, 0, 0.2);
+        box-shadow:
+        inset 0px 10px 36px 0px rgba(255, 255, 255, 0.15),
+        inset 0px -10px 36px 0px rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
     .m-30{
         margin: 30px;
     }
