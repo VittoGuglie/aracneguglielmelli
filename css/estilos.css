@@ -30,35 +30,6 @@ header ul li a.active
     background: #ffffff;
     color:#920707
 }
-/*grid en header*/
-.navegador{
-    width: 100%;
-    display: grid;
-    grid-template-areas: 
-    "gridlogo gridNavIzq gridNavDer";
-}
-.gridlogo{
-    grid-area: gridlogo;
-}
-.gridNavDer{
-    grid-area: gridNavDer;
-}
-.gridNavIzq{
-    grid-area: gridNavIzq;
-}
-/* flexbox en header */
-header,ul{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.row-reverse{
-    display: flex;
-    flex-direction: row-reverse;
-}
-.accountDerecha{
-    justify-content: flex-end;
-}
 /* estilos para el footer*/
 /* flex en footer*/
 .flexEndFooter{
@@ -69,18 +40,15 @@ header,ul{
 /*fin flex footer*/
 footer{
     background-image: linear-gradient(to bottom, #202ba8, rgb(16, 100, 203));
-    /* background-color: #202ba8; */
 }
 footer a{
     text-decoration: none;
     color:black;
+    font-size: 1.5rem;
 }
 footer a:hover{
     text-decoration: underline;
     color: white;
-}
-.contactDecoration{
-    padding: 10px 50px;
 }
 footer input{
     position: relative;
@@ -108,10 +76,6 @@ footer input[type="submit"]{
 footer input[type="submit"]:hover{
     background: aqua;
 }
-label{
-    font-size: 2rem;
-    margin-right: 20px;
-}
 /*estilos generales*/
 .centerh1{
     text-align: center;
@@ -122,108 +86,44 @@ h3{
     font-size: 2.4rem;
 }
 p{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
-.centerimg{
-    margin: 0 auto;
-    padding: 20px 40px;
-    /* width: 100%; */
+h2{
+    font-size: 2.8rem;
 }
-.centerText{
-    text-align: center;
-    font-weight: bold;
-    font-size: 2.3rem;
-    padding-bottom: 50px;
-}
-.scale{
-    transition: all 2s ease;
-}
-.scale:hover{
-    cursor: pointer;
-    transform: scale(1.3,1.3);
-}
-/* Estilos para el index.html */
-/*Grid index*/
-.gridConteiner{
+/*grid general*/
+.gridContainer{
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
-}
-.gridFirstSection{
-    display: grid;
-    grid-template-areas:
-    "imagenPrincipal textoPrincipal"
-}
-.imagenPrincipal{
-    grid-area: imagenPrincipal;
-}
-.textoPrincipal{
-    grid-area: textoPrincipal;
-}
-.gridSecondSection{
-    display: grid;
     grid-template-areas: 
-    "h2 h2 h2"
-    "gridMainVideo gridMainSecondVideo gridMainThirthVideo";
+    "header"
+    "main"
+    "footer";
 }
-h2{
-    grid-area: h2;
+header{
+    grid-area: header;
 }
-.gridMainVideo{
-    grid-area: gridMainVideo;
+main{
+    grid-area: main;
 }
-.gridMainSecondVideo{
-    grid-area: gridMainSecondVideo;
+footer{
+    grid-area: footer;
 }
-.gridMainThirthVideo{
-    grid-area: gridMainThirthVideo;
-}
-.gridThirthSection{
-    display: grid;
-    grid-template-areas: 
-    "h2 h2 h2"
-    "imgGridIzq imgGridCentro imgGridDer"
-    "p p p";
-}
-h2{
-    grid-area: h2;
-}
-.imgGridIzq{
-    grid-area: imgGridIzq;
-}
-.imgGridCentro{
-    grid-area: imgGridCentro;
-}
-.imgGridDer{
-    grid-area: imgGridDer;
-}
-p{
-    grid-area: p;
-}
-/*finaliza grid index*/
+/* Estilos para el index.html */
 .textoPrincipal h1{
     padding: 50px;
     font-size: 3rem;
-}
-.stickyTextoPrincipal{
-    position: sticky;
-    top: 50px;
 }
 .centerh3{
     text-align: center;
     padding: 30px;
     font-size: 2rem;
 }
-.p-10-35{
-    padding: 10px 35px;
-}
-.m-10{
-    margin: 10px;
-}
 .textVideo{
     width: auto;
     height: 300px;
-    background-color: rgb(225, 155, 33);
+    background-color: rgb(251, 191, 88);
     padding: 30px 10px;
     transition: all 2s linear;
 }
@@ -251,109 +151,17 @@ p{
     animation-delay: 2s;
     animation-iteration-count: infinite;
 }
-section h2{
-    font-size: 3rem;
-    margin-top: 30px;
-    margin-left: 35px;
-    margin-bottom: 20px;
-}
 /* Estilos para giftcard.html */
-/*grid en giftcard*/
-.grid-content{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "gridImgGiftcard gridTextGiftcard";
-}
-.gridImgGiftcard{
-    grid-area: gridImgGiftcard;
-}
-.gridTextGiftcard{
-    grid-area: gridTextGiftcard;
-}
-.gridgiftcard{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "gridgiftcardimage gridgiftcardimage"
-    "gridgiftcardtextone gridgiftcardtexttwo";
-}
-.gridgiftcardimage{
-    grid-area: gridgiftcardimage;
-}
-.gridgiftcardtextone{
-    grid-area: gridgiftcardtextone;
-}
-.gridgiftcardtexttwo{
-    grid-area: gridgiftcardtexttwo;
-}
-.gridgaleriagiftcard{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "h2 h2 h2"
-    "gridimguno gridimgdos gridimgtres";
-}
-h2{
-    grid-area: h2;
-}
-.gridimguno{
-    grid-area: gridimguno;
-}
-.gridimgdos{
-    grid-area: gridimgdos;
-}
-.gridimgtres{
-    grid-area: gridimgtres;
-}
-/*finaliza grid en giftcard*/
-/*flexbox giftcard*/
 .flexUl{
     display: flex;
     flex-direction: column;
 }
-.p-m-flex{
-    display: flex;
-    align-items: center;
-    margin: 0 10px 0 125px;
-}
-.flextextgiftcard{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 15px 100px 30px 20px;
-}
-.flexselectbtn{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-/*finaliza flexbox giftcard*/
-.m-40{
-    margin: 40px;
-}
 .border{
     border: solid 1px black;
-}
-main section div p{
-    margin: 10px 50px;
-    font-size: 2rem;
-}
-main section div h3{
-    padding-left: 35px;
-}
-.olDecoration{
-    padding: 10px 70px;
-    font-size: 2rem;
-    margin: auto;
 }
 .linksDecoration a{
     text-decoration: none;
     color: black;
-}
-.linksDecoration a:hover{
-    text-decoration: underline;
-    color: #920707;
 }
 .select{
     box-shadow: 0 4px 15px 0 rgba(132, 144, 143, 0.75);
@@ -364,9 +172,6 @@ main section div h3{
     border-radius: 10px;
     margin-left: 50px;
     transition: all .4s ease-in-out;
-}
-.select:hover{
-    background-color: black;
 }
 input[type="button"]{
     width: 150px;
@@ -384,7 +189,7 @@ input[type="button"]:hover{
 .button:hover {
     animation: swing 1s ease;
     animation-iteration-count: 1;
-    }
+}
 @keyframes swing {
     15% {transform: translateX(5px);}
     30% {transform: translateX(-5px);}
@@ -397,7 +202,7 @@ input[type="button"]:hover{
     position: relative;
     list-style-type: none;
     padding-left: 2.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
 }
 .check-list li:before {
     content: '';
@@ -413,80 +218,7 @@ input[type="button"]:hover{
     transform-origin: bottom left;
     transform: rotate(45deg);
 }
-section div ul li{
-    font-size: 2rem;
-    margin-left: 50px;
-}
 /* estilo para servicios.html */
-/*grid en servicios*/
-.gridTextImage{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "h1 h1"
-    "imgGridServicios textGridServicios";
-}
-h1{
-    grid-area: h1;
-}
-.imgGridServicios{
-    grid-area: imgGridServicios;
-}
-.textGridServicios{
-    grid-area: textGridServicios;
-}
-.gridSecondSectionServicios{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "h2 h2 h2"
-    "textoPrincipal textoPrincipal textoPrincipal"
-    "gridIconUno gridIconDos gridIconTres"
-    "textoIconUno textoIconDos textoIconTres";
-}
-h2{
-    grid-area: h2;
-}
-.textoPrincipal{
-    grid-area: textoPrincipal;
-}
-.gridIconUno{
-    grid-area: gridIconUno;
-}
-.gridIconDos{
-    grid-area: gridIconDos;
-}
-.gridIconTres{
-    grid-area: gridIconTres;
-}
-.textoIconUno{
-    grid-area: textoIconUno;
-}
-.textoIconDos{
-    grid-area: textoIconDos;
-}
-.textoIconTres{
-    grid-area: textoIconTres;
-}
-.gridImagesText{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "gridImgServiciosUno gridImgServiciosDos"
-    "gridTextUno gridTextDos";
-}
-.gridImgServiciosUno{
-    grid-area: gridImgServiciosUno;
-}
-.gridTextUno{
-    grid-area: gridTextUno;
-}
-.gridImgServiciosDos{
-    grid-area: gridImgServiciosDos;
-}
-.gridTextDos{
-    grid-area: gridTextDos;
-}
-/*fin grid en servicios*/
 .bgColor{
     background-color: #3c3939;
     color: #fff;
@@ -495,99 +227,10 @@ h2{
     background: rgb(195,238,174);
     background: radial-gradient(circle, rgb(134, 208, 96) 0%, rgb(112, 230, 222) 100%);
 }
-.p-m{
-    padding: 50px;
-    margin-left: auto;
-}
-.p35{
-    padding: 35px;
-}
-.fontSize-fontWeight{
-    font-size: 3rem;
-    font-weight: bold;
-}
-.textPadding{
-    padding: 5px 50px 40px 50px;
-}
-.icondecoration{
-    padding: 10px 50px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-}
-/* estilo para micuenta.html */
-/*Grids para micuenta*/
-.gridMainAccount{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: 
-    "gridAccountLeft gridAccountRight";
-}
-.gridAccountLeft{
-    grid-area: gridAccountLeft;
-}
-.gridAccountRight{
-    grid-area: gridAccountRight;
-}
-.gridAccountColumns{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "h2 h2"
-    "form form";
-}
-.gridAccountColumns h2{
-    grid-area: h2;
-}
-.gridAccountColumns form{
-    grid-area: form;
-}
-/* finaliza grids en micuenta*/
-/*flexbox en micuenta*/
-.accountFlex form .user-details{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.gender-datails{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.flexcheckbox{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-/* .flexcheckbox{
-    display:flex;
-    justify-content: space-between;
-} */
-/*fin flexbox en micuenta*/
-.m-30{
-    margin: 30px;
-}
-.p-10{
-    padding: 10px;
-}
-form .user-details .input-box{
-    width: calc(100% / 2 - 20px);
-    margin: 20px 0 12px 0;
-}
-.user-details .input-box input{
-    height: 35px;
-    width: 80%;
-    transition: all 0.3s ease;
-}
-.user-details .input-box input:focus{
-    border-bottom-width: 3px;
-}
-form .user-details .input-box label{
-    font-size: 2.5rem;
-}
+/* estilos para micuenta */
 .displayInput{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     text-align: center;
 }
 .displayInput p{
@@ -632,9 +275,6 @@ form .user-details .input-box label{
     font-weight: bold;
     margin: 10px 50px;
 }
-.accountBtn:hover{
-    background: black;
-}
 .accountDecoration h1{
     font-size: 4rem;
     padding: 30px 50px;
@@ -671,52 +311,13 @@ form .user-details .input-box label{
     padding: 10px 50px;
     margin-top: 55px;
 }
+form .user-details .input-box label{
+    font-size: 2.5rem;
+}
+label.form-input{
+    font-size: 2.5rem;
+}
 /* estilos para productos.html*/
-/*grid en productos*/
-.gridGaleria{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "h1 h1 h1"
-    "gridTextProductos gridTextProductos gridTextProductos"
-    "productoUno productoDos productoTres"
-    "productoCuatro productoCinco productoSeis"
-    "productoSiete productoOcho productoNueve";
-}
-h1{
-    grid-area: h1;
-}
-.gridTextProductos{
-    grid-area: gridTextProductos;
-}
-.productoUno{
-    grid-area: productoUno;
-}
-.productoDos{
-    grid-area: productoDos;
-}
-.productoTres{
-    grid-area: productoTres;
-}
-.productoCuatro{
-    grid-area: productoCuatro;
-}
-.productoCinco{
-    grid-area: productoCinco;
-}
-.productoSeis{
-    grid-area: productoSeis;
-}
-.productoSiete{
-    grid-area: productoSiete;
-}
-.productoOcho{
-    grid-area: productoOcho;
-}
-.productoNueve{
-    grid-area: productoNueve;
-}
-/*fin grids en productos*/
 section select{
     font-size: 1.5rem;
     padding: 16px 24px;
@@ -724,161 +325,861 @@ section select{
     color: #fff;
     border-radius: 10px;
     margin-left: 50px;
+    transition: all 2s ease-in;
 }
 section select:hover{
     background: black;
 }
-.pbottom{
-    padding-bottom: 70px;
-}
-.translateY{
-    transition: all 2s ease;
-}
-.translateY:hover{
-    cursor: pointer;
-    transform: translateY(-15px);
-} 
-@media screen and (max-width: 768px) {
-    .gridConteiner{
+/*Estilos para desktop*/
+@media screen and (min-width: 1024px){
+    /*estilos generales*/
+    .centerimg{
+        margin: 10px 40px;
+    }
+    .centerText{
+        text-align: center;
+        font-weight: bold;
+        font-size: 2.3rem;
+        padding-bottom: 50px;
+    }
+    .scale{
+        transition: all 2s ease;
+    }
+    .scale:hover{
+        cursor: pointer;
+        transform: scale(1.3,1.3);
+    }
+    /* flexbox en header */
+    header,ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .row-reverse{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .accountDerecha{
+        justify-content: flex-end;
+    }
+    /*grid en header*/
+    .navegador{
+        width: 100%;
         display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: auto auto auto;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
         grid-template-areas: 
-        "header"
-        "main"
-        "footer";
+        "gridlogo gridNavIzq gridNavDer";
     }
-    header{
-        grid-area: header;
+    .gridlogo{
+        grid-area: gridlogo;
     }
-    main{
-        grid-area: main;
+    .gridNavDer{
+        grid-area: gridNavDer;
     }
-    footer{
-        grid-area: footer;
+    .gridNavIzq{
+        grid-area: gridNavIzq;
     }
+    /*fin grid en header*/
+    /*estilos footer*/
+    .contactDecoration{
+        padding: 10px 50px;
+    }
+    label{
+        font-size: 2rem;
+        margin-right: 20px;
+    }
+    /*estilos para index*/
+    .p-10-35{
+        padding: 10px 35px;
+    }
+    .m-10{
+        margin: 10px;
+    }
+    .stickyTextoPrincipal{
+        position: sticky;
+        top: 50px;
+    }
+    section h2{
+        font-size: 3rem;
+        margin-top: 30px;
+        margin-left: 35px;
+        margin-bottom: 20px;
+    }
+    /*grid index*/
+    
+    .gridFirstSection{
+        display: grid;
+        grid-template-areas:
+        "imagenPrincipal textoPrincipal"
+    }
+    .imagenPrincipal{
+        grid-area: imagenPrincipal;
+    }
+    .textoPrincipal{
+        grid-area: textoPrincipal;
+    }
+    .gridSecondSection{
+        display: grid;
+        grid-template-areas: 
+        "h2 h2 h2"
+        "gridMainVideo gridMainSecondVideo gridMainThirthVideo";
+    }
+    h2{
+        grid-area: h2;
+    }
+    .gridMainVideo{
+        grid-area: gridMainVideo;
+    }
+    .gridMainSecondVideo{
+        grid-area: gridMainSecondVideo;
+    }
+    .gridMainThirthVideo{
+        grid-area: gridMainThirthVideo;
+    }
+    .gridThirthSection{
+        display: grid;
+        grid-template-areas: 
+        "h2 h2 h2"
+        "imgGridIzq imgGridCentro imgGridDer"
+        "p p p";
+    }
+    h2{
+        grid-area: h2;
+    }
+    .imgGridIzq{
+        grid-area: imgGridIzq;
+    }
+    .imgGridCentro{
+        grid-area: imgGridCentro;
+    }
+    .imgGridDer{
+        grid-area: imgGridDer;
+    }
+    p{
+        grid-area: p;
+    }
+    /*fin grid index*/
+    /*estilos para servicios*/
+    .p-m{
+        padding: 50px;
+        margin-left: auto;
+    }
+    .p35{
+        padding: 35px;
+    }
+    .fontSize-fontWeight{
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    .textPadding{
+        padding: 5px 50px 40px 50px;
+    }
+    .icondecoration{
+        padding: 10px 50px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+    }
+    .centerimgservicios{
+        margin: 5% 25%;
+    }
+    /*grid en servicios*/
+    .gridTextImage{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "h1 h1"
+        "imgGridServicios textGridServicios";
+    }
+    h1{
+        grid-area: h1;
+    }
+    .imgGridServicios{
+        grid-area: imgGridServicios;
+    }
+    .textGridServicios{
+        grid-area: textGridServicios;
+    }
+    .gridSecondSectionServicios{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "h2 h2 h2"
+        "textoPrincipal textoPrincipal textoPrincipal"
+        "gridIconUno gridIconDos gridIconTres"
+        "textoIconUno textoIconDos textoIconTres";
+    }
+    h2{
+        grid-area: h2;
+    }
+    .textoPrincipal{
+        grid-area: textoPrincipal;
+    }
+    .gridIconUno{
+        grid-area: gridIconUno;
+    }
+    .gridIconDos{
+        grid-area: gridIconDos;
+    }
+    .gridIconTres{
+        grid-area: gridIconTres;
+    }
+    .textoIconUno{
+        grid-area: textoIconUno;
+    }
+    .textoIconDos{
+        grid-area: textoIconDos;
+    }
+    .textoIconTres{
+        grid-area: textoIconTres;
+    }
+    .gridImagesText{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "gridImgServiciosUno gridImgServiciosDos"
+        "gridTextUno gridTextDos";
+    }
+    .gridImgServiciosUno{
+        grid-area: gridImgServiciosUno;
+    }
+    .gridTextUno{
+        grid-area: gridTextUno;
+    }
+    .gridImgServiciosDos{
+        grid-area: gridImgServiciosDos;
+    }
+    .gridTextDos{
+        grid-area: gridTextDos;
+    }
+    /*fin grid en servicios*/
+    /*estilos para giftcard*/
+    .m-40{
+        margin: 40px;
+    }
+    main section div p{
+        margin: 10px 50px;
+        font-size: 2rem;
+    }
+    main section div h3{
+        padding-left: 35px;
+    }
+    .olDecoration{
+        padding: 10px 70px;
+        font-size: 2rem;
+        margin: auto;
+    }
+    .select:hover{
+        background-color: black;
+    }
+    .linksDecoration a:hover{
+        text-decoration: underline;
+        color: #920707;
+    }
+    section div ul li{
+        font-size: 2rem;
+        margin-left: 50px;
+    }
+    /*flexbox giftcard*/
+    .flextextgiftcard{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 15px 100px 30px 20px;
+    }
+    .flexselectbtn{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    /*fin flexbox giftcard*/
+    /*grid en giftcard*/
+    .grid-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "gridImgGiftcard gridTextGiftcard";
+    }
+    .gridImgGiftcard{
+        grid-area: gridImgGiftcard;
+    }
+    .gridTextGiftcard{
+        grid-area: gridTextGiftcard;
+    }
+    .gridgiftcard{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "gridgiftcardimage gridgiftcardimage"
+        "gridgiftcardtextone gridgiftcardtexttwo";
+    }
+    .gridgiftcardimage{
+        grid-area: gridgiftcardimage;
+    }
+    .gridgiftcardtextone{
+        grid-area: gridgiftcardtextone;
+    }
+    .gridgiftcardtexttwo{
+        grid-area: gridgiftcardtexttwo;
+    }
+    .gridgaleriagiftcard{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "h2 h2 h2"
+        "gridimguno gridimgdos gridimgtres";
+    }
+    h2{
+        grid-area: h2;
+    }
+    .gridimguno{
+        grid-area: gridimguno;
+    }
+    .gridimgdos{
+        grid-area: gridimgdos;
+    }
+    .gridimgtres{
+        grid-area: gridimgtres;
+    }
+    /*fin grid en giftcard*/
+    /*estilos para micuenta*/
+    .m-30{
+        margin: 30px;
+    }
+    .p-10{
+        padding: 10px;
+    }
+    form .user-details .input-box{
+        width: calc(100% / 2 - 20px);
+        margin: 20px 0 12px 0;
+    }
+    .user-details .input-box input{
+        height: 35px;
+        width: 80%;
+        transition: all 0.3s ease;
+    }
+    .user-details .input-box input:focus{
+        border-bottom-width: 3px;
+    }
+    .accountBtn:hover{
+        background: black;
+    }
+    /*flexbox en micuenta*/
+    .accountFlex form .user-details{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .gender-datails{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .flexcheckbox{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /*fin flexbox en micuenta*/
+    /*grid en micuenta*/
+    .gridMainAccount{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: 
+        "gridAccountLeft gridAccountRight";
+    }
+    .gridAccountLeft{
+        grid-area: gridAccountLeft;
+    }
+    .gridAccountRight{
+        grid-area: gridAccountRight;
+    }
+    .gridAccountColumns{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "h2 h2"
+        "form form";
+    }
+    .gridAccountColumns h2{
+        grid-area: h2;
+    }
+    .gridAccountColumns form{
+        grid-area: form;
+    }
+    /*fin grid en micuenta*/
+    /*estilos para productos*/
+    .pbottom{
+        padding-bottom: 70px;
+    }
+    .translateY{
+        transition: all 2s ease;
+    }
+    .translateY:hover{
+        cursor: pointer;
+        transform: translateY(-15px);
+    } 
+    /*grid en productos*/
+    .gridGaleria{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "h1 h1 h1"
+        "gridTextProductos gridTextProductos gridTextProductos"
+        "productoUno productoDos productoTres"
+        "productoCuatro productoCinco productoSeis"
+        "productoSiete productoOcho productoNueve";
+    }
+    h1{
+        grid-area: h1;
+    }
+    .gridTextProductos{
+        grid-area: gridTextProductos;
+    }
+    .productoUno{
+        grid-area: productoUno;
+    }
+    .productoDos{
+        grid-area: productoDos;
+    }
+    .productoTres{
+        grid-area: productoTres;
+    }
+    .productoCuatro{
+        grid-area: productoCuatro;
+    }
+    .productoCinco{
+        grid-area: productoCinco;
+    }
+    .productoSeis{
+        grid-area: productoSeis;
+    }
+    .productoSiete{
+        grid-area: productoSiete;
+    }
+    .productoOcho{
+        grid-area: productoOcho;
+    }
+    .productoNueve{
+        grid-area: productoNueve;
+    }
+    /*fin grid en productos*/
+}
+/*Estilos para mobile*/
+@media screen and (max-width: 768px){
     .flexmediaquerie{
         display: flex;
         flex-direction: column;
     }
+    /*flexbox en header*/
     .navegador,ul{
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         width: 100%;
     }
-    .imgWidth70{
-        width: 70%;
+    /*grid index*/
+    .gridFirstSection{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "imagenPrincipal"
+        "textoPrincipal";
     }
-    .imgWidth100{
+    .imagenPrincipal{
+        grid-area: imagenPrincipal;
+    }
+    .textoPrincipal{
+        grid-area: textoPrincipal;
+    }
+    .gridSecondSection{
+        display: grid;
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: auto;
+        grid-template-areas: "h2"
+        "gridMainVideo"
+        "gridMainSecondVideo"
+        "gridMainThirthVideo";
+    }
+    h2{
+        grid-area: h2;
+    }
+    .gridMainVideo{
+        grid-area: gridMainVideo;
+    }
+    .gridMainSecondVideo{
+        grid-area: gridMainSecondVideo;
+    }
+    .gridMainThirthVideo{
+        grid-area: gridMainThirthVideo;
+    }
+    .gridThirthSection{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "h2"
+        "imgGridIzq"
+        "imgGridCentro"
+        "imgGridDer"
+        "p";
+    }
+    h2{
+        grid-area: h2;
+    }
+    .imgGridIzq{
+        grid-area: imgGridIzq;
+    }
+    .imgGridCentro{
+        grid-area: imgGridCentro;
+    }
+    .imgGridDer{
+        grid-area: imgGridDer;
+    }
+    p{
+        grid-area: p;
+    }
+    /*fin grid index*/
+    div.imagenPrincipal img{
         width: 100%;
-    }
-    .centervideo{
         margin: auto;
-        text-align: center;
     }
-    .centerh2{
+    h2.centerh2{
         text-align: center;
-        margin: 5rem 2rem;
+        margin: 3rem 10%;
+        width: 80%;
     }
-    .textMediaQuerie{
-        margin: 0 auto;
+    div.centervideo iframe{
         width: 100%;
+        height: auto;
+    }
+    div.textVideo{
+        padding: 10%;
+        width: 80%;
+        height: auto;
+        background-color: #920707;
+    }
+    div.textoPrincipal p{
+        margin: 0 auto 5px 20px;
+        padding: 5%;
+    }
+    section.gridThirthSection img{
+        width: 80%;
+        margin: 5% 10%;
+    }
+    /*grid en productos*/
+    .gridGaleria{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(11, auto);
+        grid-template-areas: 
+        "h1"
+        "gridTextProductos"
+        "productoUno"
+        "productoDos"
+        "productoTres"
+        "productoCuatro" 
+        "productoCinco" 
+        "productoSeis"
+        "productoSiete" 
+        "productoOcho" 
+        "productoNueve";
+    }
+    h1{
+        grid-area: h1;
+    }
+    .gridTextProductos{
+        grid-area: gridTextProductos;
+    }
+    .productoUno{
+        grid-area: productoUno;
+    }
+    .productoDos{
+        grid-area: productoDos;
+    }
+    .productoTres{
+        grid-area: productoTres;
+    }
+    .productoCuatro{
+        grid-area: productoCuatro;
+    }
+    .productoCinco{
+        grid-area: productoCinco;
+    }
+    .productoSeis{
+        grid-area: productoSeis;
+    }
+    .productoSiete{
+        grid-area: productoSiete;
+    }
+    .productoOcho{
+        grid-area: productoOcho;
+    }
+    .productoNueve{
+        grid-area: productoNueve;
+    }
+    /*fin grid productos*/
+    div.centerimg.pbottom img{
+        width: 80%;
+        margin: 5% 10%;
+    }
+    div.centerimg.pbottom h3,p{
+        width: 80%;
+        padding: 2% 10%;
+    }
+    p.centerText{
+        text-align: center;
+    }
+    select{
+        margin-bottom: 5%;
+    }
+    /*grid en Servicios*/
+    .gridTextImage{
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: auto;
+        grid-template-areas: "gridH1"
+        "imgGridServicios"
+        "textGridServicios";
+    }
+    h1{
+        grid-area: gridH1;
+    }
+    .imgGridServicios{
+        grid-area: imgGridServicios;
+    }
+    .textGridServicios{
+        grid-area: textGridServicios;
+    }
+    .gridSecondSectionServicios{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas: "h2"
+    "textoPrincipal"
+    "gridIconUno"
+    "textoIconUno"
+    "gridIconDos"
+    "textoIconDos"
+    "gridIconTres"
+    "textoIconTres";
+    }
+    h2{
+        grid-area: h2;
+    }
+    .textoPrincipal{
+        grid-area: textoPrincipal;
+    }
+    .gridIconUno{
+        grid-area: gridIconUno;
+    }
+    .textoIconUno{
+        grid-area: textoIconUno;
+    }
+    .gridIconDos{
+        grid-area: gridIconDos;
+    }
+    .textoIconDos{
+        grid-area: textoIconDos;
+    }
+    .gridIconTres{
+        grid-area: gridIconTres;
+    }
+    .textoIconTres{
+        grid-area: textoIconTres;
+    }
+    .gridServiciosMQ{
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "h2"
+        "gridImagesText";
+    }
+    h2{
+        grid-area: h2;
+    }
+    .gridImagesText{
+        grid-area: gridImagesText;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4,auto);
+        grid-template-areas: "gridImgServiciosUno"
+        "gridTextUno"
+        "gridImgServiciosDos"
+        "gridTextDos";
+    }
+    .gridImgServiciosUno{
+        grid-area: gridImgServiciosUno;
+    }
+    .gridTextUno{
+        grid-area: gridTextUno;
+    }
+    .gridImgServiciosDos{
+        grid-area: gridImgServiciosDos;
+    }
+    .gridTextDos{
+        grid-area: gridTextDos;
+    }
+    /*fin grid Servicios*/
+    h1{
+        width: 100%;
+    }
+    .centerimgservicios{
+        width: 80%;
+        margin: 10%;
+    }
+    .p-m{
+        margin: 10%;
+        width: 80%;
+        padding: 0;
+    }
+    .fontSize-fontWeight{
+        font-weight: bold;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 15%;
+        padding: 0;
+    }
+    .bold{
+        font-weight: bold;
+        padding-bottom: 10%;
+        font-size: 3rem;
+    }
+    /*grid giftcard*/
+    .gridfirstsectiongiftcard{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "h1"
+        "grid-content";
+    }
+    h1{
+        grid-area: h1;
+    }
+    .grid-content{
+        grid-area: grid-content;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "gridImgGiftcard"
+        "gridTextGiftcard";
+    }
+    .gridImgGiftcard{
+        grid-area: gridImgGiftcard;
+    }
+    .gridTextGiftcard{
+        grid-area: gridTextGiftcard;
+    }
+    .gridgiftcard{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "gridgiftcardimage"
+        "gridgiftcardtextone"
+        "gridgiftcardtexttwo";
+    }
+    .gridgiftcardimage{
+        grid-area: gridgiftcardimage;
+    }
+    .gridgiftcardtextone{
+        grid-area: gridgiftcardtextone;
+    }
+    .gridgiftcardtexttwo{
+        grid-area: gridgiftcardtexttwo;
+    }
+    .gridgaleriagiftcard{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "h2"
+        "gridimguno"
+        "gridimgdos"
+        "gridimgtres";
+    }
+    h2{
+        grid-area: h2;
+    }
+    .gridimguno{
+        grid-area: gridimguno;
+    }
+    .gridimgdos{
+        grid-area: gridimgdos;
+    }
+    .gridimgtres{
+        grid-area: gridimgtres;
+    }
+    /*fin grid Giftcard*/
+    .centerimg{
+        width: 80%;
+        margin: 10%;
     }
     .flexselectbtn{
         display: flex;
-        flex-direction: column;
         align-items: center;
+        flex-direction: column;
     }
-    .flexselectbtn .select{
-        margin: auto;
+    .select{
+        margin: 0;
     }
-    .check-list li{
-        margin: auto 50px;
+    ul.flexUl{
+        margin: 10%;
+        width: 80%;
+        font-size: 2.1rem;
     }
-    .m-40{
-        margin: 1em auto;
+    ol.olDecoration{
+        font-size: 2.1rem;
+        width: 80%;
+        margin: 10%;
     }
-    main section div h3{
-        text-align: center;
-        margin: auto;
-        padding: 1rem 2rem;
+    p.centerp{
+        padding-bottom: 10%;
     }
-    .centerp{
-        text-align: center;
-        margin: auto;
-        padding: 0 1rem 2rem 1rem;
-    }
-    .centervideo{
-        width: 100%;
-    }
-    .p-2{
-        padding: 2rem;
-    }
+    /*estilos para micuenta*/
     .accountDecoration{
         margin: auto;
         width: 100%;
         padding: 1rem;
     }
-    form .user-details .input-box {
-        width: 100%;
-        margin: auto;
+    input.accountBtn{
+        width: 80%;
+        margin-right: 10%;
+        margin-left: 10%;
+        padding: 7%;
+        text-align: center;
+        font-size: 2rem;
     }
-    label.form-input{
-        margin: auto;
-        padding: 2rem;
-    }
-    input.account-input{
-        margin: 2rem 2rem;
-    }
-    .checkboxDecoration{
-        margin: 1rem;
+    /*estilos footer*/
+    footer input[type="submit"]{
+        position: relative;
+        border-radius: 0 0 8px 8px;
+        width: 80%;
+        margin: 0 10%;
+        height: 4rem;
+        cursor: pointer;
+        background: rgb(0, 76, 255);
+        color: #fff;
         padding: 0;
-        width: 100%;
         text-align: center;
     }
-    .contactDecoration h3,p{
-        text-align: left;
-        margin: auto;
-        width: 100%;
+    footer input[type="submit"]:hover{
+        background: aqua;
     }
-    .contactDecoration{
-        padding: 1rem 3rem;
-        margin: auto;
+    section.contactDecoration h3{
+        width: 80%;
+        margin: 2% 10%;
     }
-    .contactDecoration label{
-        text-align: left;
-        width: 100%;
-        margin: auto;
+    section.contactDecoration label{
         display: block;
+        font-size: 2.1rem;
+        width: 80%;
+        margin: 4% 10%;
     }
     footer input[type="email"]{
-        height: 4rem;
-        width: 100%;
-        border-radius: 4px;
-    }
-    footer input[type="submit"]{
-        height: 4rem;
-        width: 100%;
-        padding: .5rem 1rem;
-        border-radius: 4px;
-        text-align: center;
-    }
-    p.textDecoration{
-        text-align: justify;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        margin: auto
-        width: 100%;
-        font-size: 2rem;
-        height: auto;
-    }
-    div.textoPrincipal{
-        margin: auto;
-        padding: 0;
-        width: 100%;
-    }
-    select{
-        margin-bottom: 2rem;
+        background: #fff;
+        width: 80%;
+        height: 50px;
+        padding: 5%;
+        margin: 0 10%;
+        border-radius: 8px 8px 0 0;
     }
 }
