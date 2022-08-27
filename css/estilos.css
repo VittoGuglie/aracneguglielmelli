@@ -152,6 +152,10 @@ footer{
     rgba(69, 74, 187, 1) 100%
     );
 }
+.highlightblack{
+    background-color: black;
+    color: white;
+}
 /* @keyframes gradiente{
     0%{background-image: radial-gradient(#3c3939, black);}
     100%{background-color: black; color: white;}
@@ -237,6 +241,9 @@ input[type="button"]:hover{
 .gradientradialbg{
     background: rgb(195,238,174);
     background: radial-gradient(circle, rgb(134, 208, 96) 0%, rgb(112, 230, 222) 100%);
+}
+.highlightme{
+    background-color: #f3c12d;
 }
 /* estilos para micuenta */
 .displayInput{
@@ -345,7 +352,8 @@ section select:hover{
 @media screen and (min-width: 1024px){
     /*estilos generales*/
     .centerimg{
-        margin: 10px 40px;
+        margin: 10%;
+        width: 80%;
     }
     .centerText{
         text-align: center;
@@ -359,6 +367,11 @@ section select:hover{
     .scale:hover{
         cursor: pointer;
         transform: scale(1.3,1.3);
+    }
+    .p-m{
+        padding-bottom: 10px;
+        padding-left: 35px;
+        margin-left: auto;
     }
     /* flexbox en header */
     header,ul{
@@ -471,16 +484,14 @@ section select:hover{
     }
     /*fin grid index*/
     /*estilos para servicios*/
-    .p-m{
-        padding: 50px;
-        margin-left: auto;
-    }
     .p35{
         padding: 35px;
     }
     .fontSize-fontWeight{
         font-size: 3rem;
         font-weight: bold;
+        width: 90%;
+        margin: auto;
     }
     .textPadding{
         padding: 5px 50px 40px 50px;
@@ -492,7 +503,12 @@ section select:hover{
         margin-top: auto;
     }
     .centerimgservicios{
-        margin: 5% 25%;
+        margin: 10%;
+        width: 80%;
+    }
+    .centerimgicon{
+        width: 50%;
+        margin: 0 auto;
     }
     /*grid en servicios*/
     .gridTextImage{
@@ -564,6 +580,10 @@ section select:hover{
     }
     /*fin grid en servicios*/
     /*estilos para giftcard*/
+    .transformgiftcard {
+        transform: translateX(42px) skew(-16deg, 11deg);
+        box-shadow: -30px -13px 17px 4px rgba(0, 0, 0, 0.3);
+    }
     .m-40{
         margin: 40px;
     }
