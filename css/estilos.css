@@ -886,10 +886,6 @@ section select:hover{
         margin: 3rem 10%;
         width: 80%;
     }
-    div.centervideo iframe{
-        width: 100%;
-        height: auto;
-    }
     div.textVideo{
         padding: 10%;
         width: 80%;
@@ -975,12 +971,12 @@ section select:hover{
         display: grid;
         grid-template-rows: repeat(3, auto);
         grid-template-columns: auto;
-        grid-template-areas: "gridH1"
+        grid-template-areas: "h1"
         "imgGridServicios"
         "textGridServicios";
     }
     h1{
-        grid-area: gridH1;
+        grid-area: h1;
     }
     .imgGridServicios{
         grid-area: imgGridServicios;
@@ -1081,6 +1077,13 @@ section select:hover{
         font-weight: bold;
         padding-bottom: 10%;
         font-size: 3rem;
+    }
+    .textMargin{
+        margin: 10%;
+    }
+    .centerimgicon{
+        width: 60%;
+        margin: 0 20%;
     }
     /*grid giftcard*/
     .gridfirstsectiongiftcard{
