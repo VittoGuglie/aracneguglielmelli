@@ -1,0 +1,980 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import "colors";
+*{
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+}
+@import "header";
+@import "footer";
+// estilos generales
+.centerh1{
+    text-align: center;
+    font-size: 4rem;
+    margin: 30px auto;
+}
+h3{
+    font-size: 2.4rem;
+}
+p{
+    font-size: 1.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+// grid general
+div.gridContainer{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    & header{
+        grid-area: header;
+    }
+    & main{
+        grid-area: main;
+    }
+    & footer{
+        grid-area: footer;
+    }
+}
+// estilos index
+.textoPrincipal{
+    h1{
+        padding: 50px;
+        font-size: 3rem;
+    }
+    p{
+        padding-left: 50px;
+        padding-right: 35px;
+        padding-top: 15px;
+    }
+} 
+.centerh3{
+    text-align: center;
+    padding: 30px;
+    font-size: 2rem;
+}
+.textVideo{
+    width: auto;
+    height: 300px;
+    background-color: $colorPatito;
+    padding: 30px 40px;
+    transition: all 2s linear;
+    &:hover{
+        background-color: $colorPrimario;
+        cursor: pointer;
+    }
+}
+.color{
+    color: $colorBlanco;
+}
+.textDecoration{
+    height: auto;
+    padding: 30px 50px;
+    background-color: $colorBlanco;
+    color: $colorNegro;
+    font-size: 3rem;
+}
+.gridThirthSection p {
+    background: linear-gradient(
+    35deg,
+    rgba(255, 200, 249, 1) 25%,
+    rgba(75, 254, 222, 1) 25%,
+    rgba(75, 254, 222, 1) 71%,
+    rgba(0, 0, 0, 0) 71%,
+    rgba(69, 74, 187, 1) 71%,
+    rgba(69, 74, 187, 1) 100%
+    );
+    & .highlightblack{
+        background-color: $colorNegro;
+        color: $colorBlanco;
+    }
+}
+//estilos para giftcard
+.flexUl{
+    display: flex;
+    flex-direction: column;
+}
+.border{
+    border: solid 1px black;
+}
+.linksDecoration a{
+    text-decoration: none;
+    color: $colorNegro;
+}
+.select{
+    box-shadow: 0 4px 15px 0 rgba(132, 144, 143, 0.75);
+    font-size: 1.5rem;
+    padding: 16px 24px;
+    background: #3c3939;
+    color: #fff;
+    border-radius: 10px;
+    margin-left: 50px;
+    transition: all .4s ease-in-out;
+}
+input[type="button"]{
+    width: 150px;
+    height: 50px;
+    background: #3c3939;
+    color: #fff;
+    border-radius: 15px;
+    padding: 10px 30px;
+    margin: 20px 50px;
+    transition: all .4s ease-in-out;
+    &:hover{
+        background: $colorNegro;
+    }
+}
+.button:hover {
+    animation: swing 1s ease;
+    animation-iteration-count: 1;
+}
+@keyframes swing {
+    15% {transform: translateX(5px);}
+    30% {transform: translateX(-5px);}
+    50% {transform: translateX(3px);}
+    65% {transform: translateX(-3px);}
+    80% {transform: translateX(2px);}
+    100% {transform: translateX(0);}
+}
+.check-list li {
+    position: relative;
+    list-style-type: none;
+    padding-left: 2.5rem;
+    margin-bottom: .5rem;
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: -2px;
+        width: 5px;
+        height: 11px;
+        border-width: 0 2px 2px 0;
+        border-style: solid;
+        border-color: $colorNegro;
+        transform-origin: bottom left;
+        transform: rotate(45deg);
+    }
+}
+//estilos para servicios
+.bgColor{
+    background-color: #3c3939;
+    color: $colorBlanco;
+}
+.gradientradialbg{
+    background: rgb(195,238,174);
+    background: radial-gradient(circle, rgb(134, 208, 96) 0%, rgb(112, 230, 222) 100%);
+}
+.highlightme{
+    background-color: $colorPatito;
+}
+//estilos para micuenta
+.displayInput{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    & p{
+        padding: 1.5rem;
+    }
+}
+.sizeForm{
+    height: auto;
+}
+.backgroundImg{
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(../assets/images/background/caprayadas.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.account-input{
+    padding: 10px;
+    outline: none;
+    border: solid 1px $colorBlanco;
+    color: $colorBlanco;
+    background: #e1d3d323;
+    font-size: 2rem;
+    border-radius: 7px;
+    margin: 30px;
+    &::placeholder{
+        color: $colorBlanco;
+    }
+}
+.form-input{
+    padding: 5px 35px;
+    color: $colorBlanco;
+    font-weight: 500;
+}
+.accountBtn{
+    padding: 10px 20px;
+    color: none;
+    outline: $colorBlanco;
+    background: #7f7c7c2e;
+    border: solid 1px $colorBlanco;
+    cursor: pointer;
+    color: $colorBlanco;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 10px 50px;
+}
+.accountDecoration{
+    & h1{
+        font-size: 4rem;
+        padding: 30px 50px;
+    }
+    & a{
+        text-decoration: none;
+        color: $colorBlanco;
+        font-size: 2rem;
+        padding: 0 50px;
+        &:hover{
+            color: $colorNegro;
+            text-decoration: underline;
+        }
+    }
+    & h2{
+        font-size: 3rem;
+        padding: 30px 50px;
+        color: $colorBlanco;
+        font-weight: bold;
+    }
+}
+.displayInput{
+    padding: 10px 50px;
+    color: $colorBlanco;
+}
+.gender-datails .gender-title{
+    font-size: 3rem;
+    color: $colorBlanco;
+    padding: 10px 50px;
+    font-weight: 500;
+}
+.checkboxDecoration{
+    color: $colorBlanco;
+    font-size: 1.5rem;
+    padding: 10px 50px;
+    margin-top: 55px;
+}
+form .user-details .input-box label{
+    font-size: 2.5rem;
+}
+label.form-input{
+    font-size: 2.5rem;
+}
+//estilos para productos
+section select{
+    font-size: 1.5rem;
+    padding: 16px 24px;
+    background: #3c3939;
+    color: #fff;
+    border-radius: 10px;
+    margin-left: 50px;
+    transition: all 2s ease-in;
+    &:hover{
+        background: $colorNegro;
+    }
+}
+// estilos para desktop
+@media screen and (min-width: 1024px){
+    //estilos generales
+    .centerimg{
+        margin: 10%;
+        width: 80%;
+    }
+    .centerText{
+        text-align: center;
+        font-weight: bold;
+        font-size: 2.3rem;
+        padding-bottom: 50px;
+    }
+    .scale{
+        transition: all 2s ease;
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.3,1.3);
+        }
+    }
+    .p-m{
+        padding-bottom: 10px;
+        padding-left: 35px;
+        margin-left: auto;
+    }
+    //estilos index
+    //grid index
+    .gridFirstSection{
+        display: grid;
+        grid-template-areas:
+        "imagenPrincipal textoPrincipal";
+        & .imagenPrincipal{
+            grid-area: imagenPrincipal;
+        }
+        & .textoPrincipal{
+            grid-area: textoPrincipal;
+        }
+    }
+    .gridSecondSection{
+        display: grid;
+        grid-template-areas: 
+        "h2 h2 h2"
+        "gridMainVideo gridMainSecondVideo gridMainThirthVideo";
+        & h2{
+            grid-area: h2;
+        }
+        & .gridMainVideo{
+            grid-area: gridMainVideo;
+        }
+        & .gridMainSecondVideo{
+            grid-area: gridMainSecondVideo;
+        }
+        & .gridMainThirthVideo{
+            grid-area: gridMainThirthVideo;
+        }
+    }
+    .gridThirthSection{
+        display: grid;
+        grid-template-areas: 
+        "h2 h2 h2"
+        "imgGridIzq imgGridCentro imgGridDer"
+        "p p p";
+        & h2{
+            grid-area: h2;
+        }
+        & .imgGridIzq{
+            grid-area: imgGridIzq;
+        }
+        & .imgGridCentro{
+            grid-area: imgGridCentro;
+        }
+        & .imgGridDer{
+            grid-area: imgGridDer;
+        }
+        & p{
+            grid-area: p;
+        }
+    }
+    //fin grid index
+    .p-10-35{
+        padding: 10px 35px;
+    }
+    .m-10{
+        margin: 10px;
+    }
+    .stickyTextoPrincipal{
+        position: sticky;
+        top: 50px;
+    }
+    section h2{
+        font-size: 3rem;
+        margin-top: 30px;
+        margin-left: 35px;
+        margin-bottom: 20px;
+    }
+    //estilos para servicios
+    //grid en servicios
+    .gridTextImage{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "h1 h1"
+        "imgGridServicios textGridServicios";
+        & h1{
+            grid-area: h1;
+        }
+        & .imgGridServicios{
+            grid-area: imgGridServicios;
+        }
+        & .textGridServicios{
+            grid-area: textGridServicios;
+        }
+    }
+    .gridSecondSectionServicios{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "h2 h2 h2"
+        "textoPrincipal textoPrincipal textoPrincipal"
+        "gridIconUno gridIconDos gridIconTres"
+        "textoIconUno textoIconDos textoIconTres";
+        & h2{
+            grid-area: h2;
+        }
+        & .textoPrincipal{
+            grid-area: textoPrincipal;
+        }
+        & .gridIconUno{
+            grid-area: gridIconUno;
+        }
+        & .gridIconDos{
+            grid-area: gridIconDos;
+        }
+        & .gridIconTres{
+            grid-area: gridIconTres;
+        }
+        & .textoIconUno{
+            grid-area: textoIconUno;
+        }
+        & .textoIconDos{
+            grid-area: textoIconDos;
+        }
+        & .textoIconTres{
+            grid-area: textoIconTres;
+        }
+    }
+    .gridImagesText{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "gridImgServiciosUno gridImgServiciosDos"
+        "gridTextUno gridTextDos";
+        & .gridImgServiciosUno{
+            grid-area: gridImgServiciosUno;
+        }
+        & .gridTextUno{
+            grid-area: gridTextUno;
+        }
+        & .gridImgServiciosDos{
+            grid-area: gridImgServiciosDos;
+        }
+        & .gridTextDos{
+            grid-area: gridTextDos;
+        }
+    }
+    //fin grid servicios
+    .p35{
+        padding: 35px;
+    }
+    .fontSize-fontWeight{
+        font-size: 3rem;
+        font-weight: bold;
+        width: 90%;
+        margin: auto;
+    }
+    .textPadding{
+        padding: 5px 50px 40px 50px;
+    }
+    .icondecoration{
+        padding: 10px 50px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+    }
+    .centerimgservicios{
+        margin: 10%;
+        width: 80%;
+    }
+    .centerimgicon{
+        width: 50%;
+        margin: 0 auto;
+    }
+    //estilos para giftcard
+    //flexbox en giftcard
+    .flextextgiftcard{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 15px 100px 30px 20px;
+    }
+    .flexselectbtn{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    //fin flexbox en giftcard
+    //grid en giftcard
+    .grid-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "gridImgGiftcard gridTextGiftcard";
+        & .gridImgGiftcard{
+            grid-area: gridImgGiftcard;
+        }
+        & .gridTextGiftcard{
+            grid-area: gridTextGiftcard;
+        }
+    }
+    .gridgiftcard{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "gridgiftcardimage gridgiftcardimage"
+        "gridgiftcardtextone gridgiftcardtexttwo";
+        & .gridgiftcardimage{
+            grid-area: gridgiftcardimage;
+        }
+        & .gridgiftcardtextone{
+            grid-area: gridgiftcardtextone;
+        }
+        & .gridgiftcardtexttwo{
+            grid-area: gridgiftcardtexttwo;
+        }
+    }
+    .gridgaleriagiftcard{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "h2 h2 h2"
+        "gridimguno gridimgdos gridimgtres";
+        & h2{
+            grid-area: h2;
+        }
+        & .gridimguno{
+            grid-area: gridimguno;
+        }
+        & .gridimgdos{
+            grid-area: gridimgdos;
+        }
+        & .gridimgtres{
+            grid-area: gridimgtres;
+        }
+    }
+    //fin grid en giftcard 
+    .transformgiftcard {
+        transform: translateX(42px) skew(-16deg, 11deg);
+        box-shadow: -30px -13px 17px 4px rgba(0, 0, 0, 0.3);
+    }
+    .m-40{
+        margin: 40px;
+    }
+    main section div{
+        p{
+            margin: 10px 50px;
+            font-size: 2rem;
+        }
+        h3{
+            padding-left: 35px;
+        }
+    } 
+    .olDecoration{
+        padding: 10px 70px;
+        font-size: 2rem;
+        margin: auto;
+    }
+    .select:hover{
+        background-color: $colorNegro;
+    }
+    .linksDecoration a:hover{
+        text-decoration: underline;
+        color: $colorPrimario;
+    }
+    section div ul li{
+        font-size: 2rem;
+        margin-left: 50px;
+    }
+    //estilos para micuenta
+    //flexbox en micuenta
+    .accountFlex form .user-details{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .gender-datails{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .flexcheckbox{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    //fin flexbox en micuenta
+    //grid en micuenta
+    .gridMainAccount{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: 
+        "gridAccountLeft gridAccountRight";
+        & .gridAccountLeft{
+            grid-area: gridAccountLeft;
+        }
+        & .gridAccountRight{
+            grid-area: gridAccountRight;
+        }
+    }
+    .gridAccountColumns{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "h2 h2"
+        "form form";
+        & h2{
+            grid-area: h2;
+        }
+        & form{
+            grid-area: form;
+        }
+    }
+    //fin grid en micuenta
+    .boxglass {
+        background-color: rgba(0, 0, 0, 0.2);
+        box-shadow:
+        inset 0px 10px 36px 0px rgba(255, 255, 255, 0.15),
+        inset 0px -10px 36px 0px rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+    .m-30{
+        margin: 30px;
+    }
+    .p-10{
+        padding: 10px;
+    }
+    form .user-details .input-box{
+        width: calc(100% / 2 - 20px);
+        margin: 20px 0 12px 0;
+    }
+    .user-details .input-box input{
+        height: 35px;
+        width: 80%;
+        transition: all 0.3s ease;
+        &:focus{
+            border-bottom-width: 3px;
+        }
+    }
+    .accountBtn:hover{
+        background: $colorNegro;
+    }
+    //estilos para productos
+    //grid en productos
+    .gridGaleria{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "h1 h1 h1"
+        "gridTextProductos gridTextProductos gridTextProductos"
+        "productoUno productoDos productoTres"
+        "productoCuatro productoCinco productoSeis"
+        "productoSiete productoOcho productoNueve";
+        h1{
+            grid-area: h1;
+        }
+        .gridTextProductos{
+            grid-area: gridTextProductos;
+        }
+        .productoUno{
+            grid-area: productoUno;
+        }
+        .productoDos{
+            grid-area: productoDos;
+        }
+        .productoTres{
+            grid-area: productoTres;
+        }
+        .productoCuatro{
+            grid-area: productoCuatro;
+        }
+        .productoCinco{
+            grid-area: productoCinco;
+        }
+        .productoSeis{
+            grid-area: productoSeis;
+        }
+        .productoSiete{
+            grid-area: productoSiete;
+        }
+        .productoOcho{
+            grid-area: productoOcho;
+        }
+        .productoNueve{
+            grid-area: productoNueve;
+        }
+    }
+    //fin grid en productos
+    .pbottom{
+        padding-bottom: 70px;
+    }
+    .translateY{
+        transition: all 2s ease;
+        &:hover{
+            cursor: pointer;
+            transform: translateY(-15px);
+        }
+    }
+}
+// estilos para mobile
+@media screen and (max-width: 768px) {
+    .flexmediaquerie{
+        display: flex;
+        flex-direction: column;
+    }
+    //estilos INDEX
+    // grid index
+    .gridFirstSection{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "imagenPrincipal"
+        "textoPrincipal";
+        & .imagenPrincipal{
+            grid-area: imagenPrincipal;
+        }
+        & .textoPrincipal{
+            grid-area: textoPrincipal;
+        }
+    }
+    .gridSecondSection{
+        display: grid;
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: auto;
+        grid-template-areas: "h2"
+        "gridMainVideo"
+        "gridMainSecondVideo"
+        "gridMainThirthVideo";
+        & h2{
+            grid-area: h2;
+        }
+        & .gridMainVideo{
+            grid-area: gridMainVideo;
+        }
+        & .gridMainSecondVideo{
+            grid-area: gridMainSecondVideo;
+        }
+        & .gridMainThirthVideo{
+            grid-area: gridMainThirthVideo;
+        }
+    }
+    .gridThirthSection{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "h2"
+        "imgGridIzq"
+        "imgGridCentro"
+        "imgGridDer"
+        "p";
+        & h2{
+            grid-area: h2;
+        }
+        & .imgGridIzq{
+            grid-area: imgGridIzq;
+        }
+        & .imgGridCentro{
+            grid-area: imgGridCentro;
+        }
+        & .imgGridDer{
+            grid-area: imgGridDer;
+        }
+        & p{
+            grid-area: p;
+        }
+    }
+    // fin grid index
+    div.imagenPrincipal img{
+        width: 100%;
+        margin: auto;
+    }
+    h2.centerh2{
+        text-align: center;
+        margin: 3rem 10%;
+        width: 80%;
+    }
+    div.textVideo{
+        padding: 10%;
+        width: 80%;
+        height: auto;
+        background-color: $colorPrimario;
+    }
+    div.textoPrincipal p{
+        margin: 0 auto 5px 20px;
+        padding: 5%;
+    }
+    section.gridThirthSection img{
+        width: 80%;
+        margin: 5% 10%;
+    }
+    //estilos PRODUCTOS
+    //grid en productos
+    .gridGaleria{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(11, auto);
+        grid-template-areas: 
+        "h1"
+        "gridTextProductos"
+        "productoUno"
+        "productoDos"
+        "productoTres"
+        "productoCuatro" 
+        "productoCinco" 
+        "productoSeis"
+        "productoSiete" 
+        "productoOcho" 
+        "productoNueve";
+        h1{
+            grid-area: h1;
+        }
+        .gridTextProductos{
+            grid-area: gridTextProductos;
+        }
+        .productoUno{
+            grid-area: productoUno;
+        }
+        .productoDos{
+            grid-area: productoDos;
+        }
+        .productoTres{
+            grid-area: productoTres;
+        }
+        .productoCuatro{
+            grid-area: productoCuatro;
+        }
+        .productoCinco{
+            grid-area: productoCinco;
+        }
+        .productoSeis{
+            grid-area: productoSeis;
+        }
+        .productoSiete{
+            grid-area: productoSiete;
+        }
+        .productoOcho{
+            grid-area: productoOcho;
+        }
+        .productoNueve{
+            grid-area: productoNueve;
+        }
+    }
+    //fin grid en productos
+    div.centerimg.pbottom img{
+        width: 80%;
+        margin: 5% 10%;
+    }
+    div.centerimg.pbottom h3,p{
+        width: 80%;
+        padding: 2% 10%;
+    }
+    p.centerText{
+        text-align: center;
+    }
+    select{
+        margin-bottom: 5%;
+    }
+    //estilos en SERVICIOS
+    //grid en servicios
+    .gridTextImage{
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: auto;
+        grid-template-areas: "h1"
+        "imgGridServicios"
+        "textGridServicios";
+        h1{
+            grid-area: h1;
+        }
+        .imgGridServicios{
+            grid-area: imgGridServicios;
+        }
+        .textGridServicios{
+            grid-area: textGridServicios;
+        }
+    }
+    .gridSecondSectionServicios{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas: "h2"
+        "textoPrincipal"
+        "gridIconUno"
+        "textoIconUno"
+        "gridIconDos"
+        "textoIconDos"
+        "gridIconTres"
+        "textoIconTres";
+        h2{
+            grid-area: h2;
+        }
+        .textoPrincipal{
+            grid-area: textoPrincipal;
+        }
+        .gridIconUno{
+            grid-area: gridIconUno;
+        }
+        .textoIconUno{
+            grid-area: textoIconUno;
+        }
+        .gridIconDos{
+            grid-area: gridIconDos;
+        }
+        .textoIconDos{
+            grid-area: textoIconDos;
+        }
+        .gridIconTres{
+            grid-area: gridIconTres;
+        }
+        .textoIconTres{
+            grid-area: textoIconTres;
+        }
+    }
+    .gridServiciosMQ{
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "h2"
+        "gridImagesText";
+        h2{
+            grid-area: h2;
+        }
+        .gridImagesText{
+            grid-area: gridImagesText;
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: repeat(4,auto);
+            grid-template-areas: "gridImgServiciosUno"
+            "gridTextUno"
+            "gridImgServiciosDos"
+            "gridTextDos";
+            .gridImgServiciosUno{
+                grid-area: gridImgServiciosUno;
+            }
+            .gridTextUno{
+                grid-area: gridTextUno;
+            }
+            .gridImgServiciosDos{
+                grid-area: gridImgServiciosDos;
+            }
+            .gridTextDos{
+                grid-area: gridTextDos;
+            }
+        }
+    }
+    //fin grid en servicios
+    h1{
+        width: 100%;
+    }
+    .centerimgservicios{
+        width: 80%;
+        margin: 10%;
+    }
+    .p-m{
+        margin: 10%;
+        width: 80%;
+        padding: 0;
+    }
+    .fontSize-fontWeight{
+        font-weight: bold;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 15%;
+        padding: 0;
+    }
+    .bold{
+        font-weight: bold;
+        padding-bottom: 10%;
+        font-size: 3rem;
+    }
+    .textMargin{
+        margin: 10%;
+    }
+    .centerimgicon{
+        width: 60%;
+        margin: 0 20%;
+    }
+}
