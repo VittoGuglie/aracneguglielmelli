@@ -126,6 +126,324 @@ footer {
     margin: 0 10%;
     border-radius: 8px 8px 0 0; } }
 
+div.gridContainer {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header" "main" "footer"; }
+  div.gridContainer header {
+    grid-area: header; }
+  div.gridContainer main {
+    grid-area: main; }
+  div.gridContainer footer {
+    grid-area: footer; }
+
+@media screen and (min-width: 1024px) {
+  .gridFirstSection {
+    display: grid;
+    grid-template-areas: "imagenPrincipal textoPrincipal"; }
+    .gridFirstSection .imagenPrincipal {
+      grid-area: imagenPrincipal; }
+    .gridFirstSection .textoPrincipal {
+      grid-area: textoPrincipal; }
+  .gridSecondSection {
+    display: grid;
+    grid-template-areas: "h2 h2 h2" "gridMainVideo gridMainSecondVideo gridMainThirthVideo"; }
+    .gridSecondSection h2 {
+      grid-area: h2; }
+    .gridSecondSection .gridMainVideo {
+      grid-area: gridMainVideo; }
+    .gridSecondSection .gridMainSecondVideo {
+      grid-area: gridMainSecondVideo; }
+    .gridSecondSection .gridMainThirthVideo {
+      grid-area: gridMainThirthVideo; }
+  .gridThirthSection {
+    display: grid;
+    grid-template-areas: "h2 h2 h2" "imgGridIzq imgGridCentro imgGridDer" "p p p"; }
+    .gridThirthSection h2 {
+      grid-area: h2; }
+    .gridThirthSection .imgGridIzq {
+      grid-area: imgGridIzq; }
+    .gridThirthSection .imgGridCentro {
+      grid-area: imgGridCentro; }
+    .gridThirthSection .imgGridDer {
+      grid-area: imgGridDer; }
+    .gridThirthSection p {
+      grid-area: p; }
+  .gridTextImage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "h1 h1" "imgGridServicios textGridServicios"; }
+    .gridTextImage h1 {
+      grid-area: h1; }
+    .gridTextImage .imgGridServicios {
+      grid-area: imgGridServicios; }
+    .gridTextImage .textGridServicios {
+      grid-area: textGridServicios; }
+  .gridSecondSectionServicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "h2 h2 h2" "textoPrincipal textoPrincipal textoPrincipal" "gridIconUno gridIconDos gridIconTres" "textoIconUno textoIconDos textoIconTres"; }
+    .gridSecondSectionServicios h2 {
+      grid-area: h2; }
+    .gridSecondSectionServicios .textoPrincipal {
+      grid-area: textoPrincipal; }
+    .gridSecondSectionServicios .gridIconUno {
+      grid-area: gridIconUno; }
+    .gridSecondSectionServicios .gridIconDos {
+      grid-area: gridIconDos; }
+    .gridSecondSectionServicios .gridIconTres {
+      grid-area: gridIconTres; }
+    .gridSecondSectionServicios .textoIconUno {
+      grid-area: textoIconUno; }
+    .gridSecondSectionServicios .textoIconDos {
+      grid-area: textoIconDos; }
+    .gridSecondSectionServicios .textoIconTres {
+      grid-area: textoIconTres; }
+  .gridImagesText {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "gridImgServiciosUno gridImgServiciosDos" "gridTextUno gridTextDos"; }
+    .gridImagesText .gridImgServiciosUno {
+      grid-area: gridImgServiciosUno; }
+    .gridImagesText .gridTextUno {
+      grid-area: gridTextUno; }
+    .gridImagesText .gridImgServiciosDos {
+      grid-area: gridImgServiciosDos; }
+    .gridImagesText .gridTextDos {
+      grid-area: gridTextDos; }
+  .grid-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "gridImgGiftcard gridTextGiftcard"; }
+    .grid-content .gridImgGiftcard {
+      grid-area: gridImgGiftcard; }
+    .grid-content .gridTextGiftcard {
+      grid-area: gridTextGiftcard; }
+  .gridgiftcard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "gridgiftcardimage gridgiftcardimage" "gridgiftcardtextone gridgiftcardtexttwo"; }
+    .gridgiftcard .gridgiftcardimage {
+      grid-area: gridgiftcardimage; }
+    .gridgiftcard .gridgiftcardtextone {
+      grid-area: gridgiftcardtextone; }
+    .gridgiftcard .gridgiftcardtexttwo {
+      grid-area: gridgiftcardtexttwo; }
+  .gridgaleriagiftcard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "h2 h2 h2" "gridimguno gridimgdos gridimgtres"; }
+    .gridgaleriagiftcard h2 {
+      grid-area: h2; }
+    .gridgaleriagiftcard .gridimguno {
+      grid-area: gridimguno; }
+    .gridgaleriagiftcard .gridimgdos {
+      grid-area: gridimgdos; }
+    .gridgaleriagiftcard .gridimgtres {
+      grid-area: gridimgtres; }
+  .gridMainAccount {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "gridAccountLeft gridAccountRight"; }
+    .gridMainAccount .gridAccountLeft {
+      grid-area: gridAccountLeft; }
+    .gridMainAccount .gridAccountRight {
+      grid-area: gridAccountRight; }
+  .gridAccountColumns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "h2 h2" "form form"; }
+    .gridAccountColumns h2 {
+      grid-area: h2; }
+    .gridAccountColumns form {
+      grid-area: form; }
+  .gridGaleria {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "h1 h1 h1" "gridTextProductos gridTextProductos gridTextProductos" "productoUno productoDos productoTres" "productoCuatro productoCinco productoSeis" "productoSiete productoOcho productoNueve"; }
+    .gridGaleria h1 {
+      grid-area: h1; }
+    .gridGaleria .gridTextProductos {
+      grid-area: gridTextProductos; }
+    .gridGaleria .productoUno {
+      grid-area: productoUno; }
+    .gridGaleria .productoDos {
+      grid-area: productoDos; }
+    .gridGaleria .productoTres {
+      grid-area: productoTres; }
+    .gridGaleria .productoCuatro {
+      grid-area: productoCuatro; }
+    .gridGaleria .productoCinco {
+      grid-area: productoCinco; }
+    .gridGaleria .productoSeis {
+      grid-area: productoSeis; }
+    .gridGaleria .productoSiete {
+      grid-area: productoSiete; }
+    .gridGaleria .productoOcho {
+      grid-area: productoOcho; }
+    .gridGaleria .productoNueve {
+      grid-area: productoNueve; } }
+
+@media screen and (min-width: 768px) {
+  .gridFirstSection {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "imagenPrincipal" "textoPrincipal"; }
+    .gridFirstSection .imagenPrincipal {
+      grid-area: imagenPrincipal; }
+    .gridFirstSection .textoPrincipal {
+      grid-area: textoPrincipal; }
+  .gridSecondSection {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: auto;
+    grid-template-areas: "h2" "gridMainVideo" "gridMainSecondVideo" "gridMainThirthVideo"; }
+    .gridSecondSection h2 {
+      grid-area: h2; }
+    .gridSecondSection .gridMainVideo {
+      grid-area: gridMainVideo; }
+    .gridSecondSection .gridMainSecondVideo {
+      grid-area: gridMainSecondVideo; }
+    .gridSecondSection .gridMainThirthVideo {
+      grid-area: gridMainThirthVideo; }
+  .gridThirthSection {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "h2" "imgGridIzq" "imgGridCentro" "imgGridDer" "p"; }
+    .gridThirthSection h2 {
+      grid-area: h2; }
+    .gridThirthSection .imgGridIzq {
+      grid-area: imgGridIzq; }
+    .gridThirthSection .imgGridCentro {
+      grid-area: imgGridCentro; }
+    .gridThirthSection .imgGridDer {
+      grid-area: imgGridDer; }
+    .gridThirthSection p {
+      grid-area: p; }
+  .gridGaleria {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(11, auto);
+    grid-template-areas: "h1" "gridTextProductos" "productoUno" "productoDos" "productoTres" "productoCuatro"  "productoCinco"  "productoSeis" "productoSiete"  "productoOcho"  "productoNueve"; }
+    .gridGaleria h1 {
+      grid-area: h1; }
+    .gridGaleria .gridTextProductos {
+      grid-area: gridTextProductos; }
+    .gridGaleria .productoUno {
+      grid-area: productoUno; }
+    .gridGaleria .productoDos {
+      grid-area: productoDos; }
+    .gridGaleria .productoTres {
+      grid-area: productoTres; }
+    .gridGaleria .productoCuatro {
+      grid-area: productoCuatro; }
+    .gridGaleria .productoCinco {
+      grid-area: productoCinco; }
+    .gridGaleria .productoSeis {
+      grid-area: productoSeis; }
+    .gridGaleria .productoSiete {
+      grid-area: productoSiete; }
+    .gridGaleria .productoOcho {
+      grid-area: productoOcho; }
+    .gridGaleria .productoNueve {
+      grid-area: productoNueve; }
+  .gridTextImage {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: auto;
+    grid-template-areas: "h1" "imgGridServicios" "textGridServicios"; }
+    .gridTextImage h1 {
+      grid-area: h1; }
+    .gridTextImage .imgGridServicios {
+      grid-area: imgGridServicios; }
+    .gridTextImage .textGridServicios {
+      grid-area: textGridServicios; }
+  .gridSecondSectionServicios {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas: "h2" "textoPrincipal" "gridIconUno" "textoIconUno" "gridIconDos" "textoIconDos" "gridIconTres" "textoIconTres"; }
+    .gridSecondSectionServicios h2 {
+      grid-area: h2; }
+    .gridSecondSectionServicios .textoPrincipal {
+      grid-area: textoPrincipal; }
+    .gridSecondSectionServicios .gridIconUno {
+      grid-area: gridIconUno; }
+    .gridSecondSectionServicios .textoIconUno {
+      grid-area: textoIconUno; }
+    .gridSecondSectionServicios .gridIconDos {
+      grid-area: gridIconDos; }
+    .gridSecondSectionServicios .textoIconDos {
+      grid-area: textoIconDos; }
+    .gridSecondSectionServicios .gridIconTres {
+      grid-area: gridIconTres; }
+    .gridSecondSectionServicios .textoIconTres {
+      grid-area: textoIconTres; }
+  .gridServiciosMQ {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "h2" "gridImagesText"; }
+    .gridServiciosMQ h2 {
+      grid-area: h2; }
+    .gridServiciosMQ .gridImagesText {
+      grid-area: gridImagesText;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: repeat(4, auto);
+      grid-template-areas: "gridImgServiciosUno" "gridTextUno" "gridImgServiciosDos" "gridTextDos"; }
+      .gridServiciosMQ .gridImagesText .gridImgServiciosUno {
+        grid-area: gridImgServiciosUno; }
+      .gridServiciosMQ .gridImagesText .gridTextUno {
+        grid-area: gridTextUno; }
+      .gridServiciosMQ .gridImagesText .gridImgServiciosDos {
+        grid-area: gridImgServiciosDos; }
+      .gridServiciosMQ .gridImagesText .gridTextDos {
+        grid-area: gridTextDos; }
+  .gridfirstsectiongiftcard {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "h1" "grid-content"; }
+  h1 {
+    grid-area: h1; }
+  .grid-content {
+    grid-area: grid-content;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "gridImgGiftcard" "gridTextGiftcard"; }
+    .grid-content .gridImgGiftcard {
+      grid-area: gridImgGiftcard; }
+    .grid-content .gridTextGiftcard {
+      grid-area: gridTextGiftcard; }
+  .gridgiftcard {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "gridgiftcardimage" "gridgiftcardtextone" "gridgiftcardtexttwo"; }
+    .gridgiftcard .gridgiftcardimage {
+      grid-area: gridgiftcardimage; }
+    .gridgiftcard .gridgiftcardtextone {
+      grid-area: gridgiftcardtextone; }
+    .gridgiftcard .gridgiftcardtexttwo {
+      grid-area: gridgiftcardtexttwo; }
+  .gridgaleriagiftcard {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "h2" "gridimguno" "gridimgdos" "gridimgtres"; }
+    .gridgaleriagiftcard h2 {
+      grid-area: h2; }
+    .gridgaleriagiftcard .gridimguno {
+      grid-area: gridimguno; }
+    .gridgaleriagiftcard .gridimgdos {
+      grid-area: gridimgdos; }
+    .gridgaleriagiftcard .gridimgtres {
+      grid-area: gridimgtres; } }
+
 .centerh1 {
   text-align: center;
   font-size: 4rem;
@@ -139,18 +457,6 @@ p {
 
 h2 {
   font-size: 2.8rem; }
-
-div.gridContainer {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: auto auto auto;
-  grid-template-areas: "header" "main" "footer"; }
-  div.gridContainer header {
-    grid-area: header; }
-  div.gridContainer main {
-    grid-area: main; }
-  div.gridContainer footer {
-    grid-area: footer; }
 
 .textoPrincipal h1 {
   padding: 50px;
@@ -388,37 +694,6 @@ section select {
     padding-bottom: 10px;
     padding-left: 35px;
     margin-left: auto; }
-  .gridFirstSection {
-    display: grid;
-    grid-template-areas: "imagenPrincipal textoPrincipal"; }
-    .gridFirstSection .imagenPrincipal {
-      grid-area: imagenPrincipal; }
-    .gridFirstSection .textoPrincipal {
-      grid-area: textoPrincipal; }
-  .gridSecondSection {
-    display: grid;
-    grid-template-areas: "h2 h2 h2" "gridMainVideo gridMainSecondVideo gridMainThirthVideo"; }
-    .gridSecondSection h2 {
-      grid-area: h2; }
-    .gridSecondSection .gridMainVideo {
-      grid-area: gridMainVideo; }
-    .gridSecondSection .gridMainSecondVideo {
-      grid-area: gridMainSecondVideo; }
-    .gridSecondSection .gridMainThirthVideo {
-      grid-area: gridMainThirthVideo; }
-  .gridThirthSection {
-    display: grid;
-    grid-template-areas: "h2 h2 h2" "imgGridIzq imgGridCentro imgGridDer" "p p p"; }
-    .gridThirthSection h2 {
-      grid-area: h2; }
-    .gridThirthSection .imgGridIzq {
-      grid-area: imgGridIzq; }
-    .gridThirthSection .imgGridCentro {
-      grid-area: imgGridCentro; }
-    .gridThirthSection .imgGridDer {
-      grid-area: imgGridDer; }
-    .gridThirthSection p {
-      grid-area: p; }
   .p-10-35 {
     padding: 10px 35px; }
   .m-10 {
@@ -431,48 +706,6 @@ section select {
     margin-top: 30px;
     margin-left: 35px;
     margin-bottom: 20px; }
-  .gridTextImage {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "h1 h1" "imgGridServicios textGridServicios"; }
-    .gridTextImage h1 {
-      grid-area: h1; }
-    .gridTextImage .imgGridServicios {
-      grid-area: imgGridServicios; }
-    .gridTextImage .textGridServicios {
-      grid-area: textGridServicios; }
-  .gridSecondSectionServicios {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "h2 h2 h2" "textoPrincipal textoPrincipal textoPrincipal" "gridIconUno gridIconDos gridIconTres" "textoIconUno textoIconDos textoIconTres"; }
-    .gridSecondSectionServicios h2 {
-      grid-area: h2; }
-    .gridSecondSectionServicios .textoPrincipal {
-      grid-area: textoPrincipal; }
-    .gridSecondSectionServicios .gridIconUno {
-      grid-area: gridIconUno; }
-    .gridSecondSectionServicios .gridIconDos {
-      grid-area: gridIconDos; }
-    .gridSecondSectionServicios .gridIconTres {
-      grid-area: gridIconTres; }
-    .gridSecondSectionServicios .textoIconUno {
-      grid-area: textoIconUno; }
-    .gridSecondSectionServicios .textoIconDos {
-      grid-area: textoIconDos; }
-    .gridSecondSectionServicios .textoIconTres {
-      grid-area: textoIconTres; }
-  .gridImagesText {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "gridImgServiciosUno gridImgServiciosDos" "gridTextUno gridTextDos"; }
-    .gridImagesText .gridImgServiciosUno {
-      grid-area: gridImgServiciosUno; }
-    .gridImagesText .gridTextUno {
-      grid-area: gridTextUno; }
-    .gridImagesText .gridImgServiciosDos {
-      grid-area: gridImgServiciosDos; }
-    .gridImagesText .gridTextDos {
-      grid-area: gridTextDos; }
   .p35 {
     padding: 35px; }
   .fontSize-fontWeight {
@@ -502,36 +735,6 @@ section select {
     display: flex;
     flex-direction: row;
     align-items: center; }
-  .grid-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "gridImgGiftcard gridTextGiftcard"; }
-    .grid-content .gridImgGiftcard {
-      grid-area: gridImgGiftcard; }
-    .grid-content .gridTextGiftcard {
-      grid-area: gridTextGiftcard; }
-  .gridgiftcard {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "gridgiftcardimage gridgiftcardimage" "gridgiftcardtextone gridgiftcardtexttwo"; }
-    .gridgiftcard .gridgiftcardimage {
-      grid-area: gridgiftcardimage; }
-    .gridgiftcard .gridgiftcardtextone {
-      grid-area: gridgiftcardtextone; }
-    .gridgiftcard .gridgiftcardtexttwo {
-      grid-area: gridgiftcardtexttwo; }
-  .gridgaleriagiftcard {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "h2 h2 h2" "gridimguno gridimgdos gridimgtres"; }
-    .gridgaleriagiftcard h2 {
-      grid-area: h2; }
-    .gridgaleriagiftcard .gridimguno {
-      grid-area: gridimguno; }
-    .gridgaleriagiftcard .gridimgdos {
-      grid-area: gridimgdos; }
-    .gridgaleriagiftcard .gridimgtres {
-      grid-area: gridimgtres; }
   .transformgiftcard {
     transform: translateX(42px) skew(-16deg, 11deg);
     box-shadow: -30px -13px 17px 4px rgba(0, 0, 0, 0.3); }
@@ -566,22 +769,6 @@ section select {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-  .gridMainAccount {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: "gridAccountLeft gridAccountRight"; }
-    .gridMainAccount .gridAccountLeft {
-      grid-area: gridAccountLeft; }
-    .gridMainAccount .gridAccountRight {
-      grid-area: gridAccountRight; }
-  .gridAccountColumns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "h2 h2" "form form"; }
-    .gridAccountColumns h2 {
-      grid-area: h2; }
-    .gridAccountColumns form {
-      grid-area: form; }
   .boxglass {
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: inset 0px 10px 36px 0px rgba(255, 255, 255, 0.15), inset 0px -10px 36px 0px rgba(255, 255, 255, 0.1);
@@ -602,32 +789,6 @@ section select {
       border-bottom-width: 3px; }
   .accountBtn:hover {
     background: #000; }
-  .gridGaleria {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "h1 h1 h1" "gridTextProductos gridTextProductos gridTextProductos" "productoUno productoDos productoTres" "productoCuatro productoCinco productoSeis" "productoSiete productoOcho productoNueve"; }
-    .gridGaleria h1 {
-      grid-area: h1; }
-    .gridGaleria .gridTextProductos {
-      grid-area: gridTextProductos; }
-    .gridGaleria .productoUno {
-      grid-area: productoUno; }
-    .gridGaleria .productoDos {
-      grid-area: productoDos; }
-    .gridGaleria .productoTres {
-      grid-area: productoTres; }
-    .gridGaleria .productoCuatro {
-      grid-area: productoCuatro; }
-    .gridGaleria .productoCinco {
-      grid-area: productoCinco; }
-    .gridGaleria .productoSeis {
-      grid-area: productoSeis; }
-    .gridGaleria .productoSiete {
-      grid-area: productoSiete; }
-    .gridGaleria .productoOcho {
-      grid-area: productoOcho; }
-    .gridGaleria .productoNueve {
-      grid-area: productoNueve; }
   .pbottom {
     padding-bottom: 70px; }
   .translateY {
@@ -640,43 +801,6 @@ section select {
   .flexmediaquerie {
     display: flex;
     flex-direction: column; }
-  .gridFirstSection {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-    grid-template-areas: "imagenPrincipal" "textoPrincipal"; }
-    .gridFirstSection .imagenPrincipal {
-      grid-area: imagenPrincipal; }
-    .gridFirstSection .textoPrincipal {
-      grid-area: textoPrincipal; }
-  .gridSecondSection {
-    display: grid;
-    grid-template-rows: repeat(4, auto);
-    grid-template-columns: auto;
-    grid-template-areas: "h2" "gridMainVideo" "gridMainSecondVideo" "gridMainThirthVideo"; }
-    .gridSecondSection h2 {
-      grid-area: h2; }
-    .gridSecondSection .gridMainVideo {
-      grid-area: gridMainVideo; }
-    .gridSecondSection .gridMainSecondVideo {
-      grid-area: gridMainSecondVideo; }
-    .gridSecondSection .gridMainThirthVideo {
-      grid-area: gridMainThirthVideo; }
-  .gridThirthSection {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(5, auto);
-    grid-template-areas: "h2" "imgGridIzq" "imgGridCentro" "imgGridDer" "p"; }
-    .gridThirthSection h2 {
-      grid-area: h2; }
-    .gridThirthSection .imgGridIzq {
-      grid-area: imgGridIzq; }
-    .gridThirthSection .imgGridCentro {
-      grid-area: imgGridCentro; }
-    .gridThirthSection .imgGridDer {
-      grid-area: imgGridDer; }
-    .gridThirthSection p {
-      grid-area: p; }
   div.imagenPrincipal img {
     width: 100%;
     margin: auto; }
@@ -695,33 +819,6 @@ section select {
   section.gridThirthSection img {
     width: 80%;
     margin: 5% 10%; }
-  .gridGaleria {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(11, auto);
-    grid-template-areas: "h1" "gridTextProductos" "productoUno" "productoDos" "productoTres" "productoCuatro"  "productoCinco"  "productoSeis" "productoSiete"  "productoOcho"  "productoNueve"; }
-    .gridGaleria h1 {
-      grid-area: h1; }
-    .gridGaleria .gridTextProductos {
-      grid-area: gridTextProductos; }
-    .gridGaleria .productoUno {
-      grid-area: productoUno; }
-    .gridGaleria .productoDos {
-      grid-area: productoDos; }
-    .gridGaleria .productoTres {
-      grid-area: productoTres; }
-    .gridGaleria .productoCuatro {
-      grid-area: productoCuatro; }
-    .gridGaleria .productoCinco {
-      grid-area: productoCinco; }
-    .gridGaleria .productoSeis {
-      grid-area: productoSeis; }
-    .gridGaleria .productoSiete {
-      grid-area: productoSiete; }
-    .gridGaleria .productoOcho {
-      grid-area: productoOcho; }
-    .gridGaleria .productoNueve {
-      grid-area: productoNueve; }
   div.centerimg.pbottom img {
     width: 80%;
     margin: 5% 10%; }
@@ -732,58 +829,6 @@ section select {
     text-align: center; }
   select {
     margin-bottom: 5%; }
-  .gridTextImage {
-    display: grid;
-    grid-template-rows: repeat(3, auto);
-    grid-template-columns: auto;
-    grid-template-areas: "h1" "imgGridServicios" "textGridServicios"; }
-    .gridTextImage h1 {
-      grid-area: h1; }
-    .gridTextImage .imgGridServicios {
-      grid-area: imgGridServicios; }
-    .gridTextImage .textGridServicios {
-      grid-area: textGridServicios; }
-  .gridSecondSectionServicios {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(8, auto);
-    grid-template-areas: "h2" "textoPrincipal" "gridIconUno" "textoIconUno" "gridIconDos" "textoIconDos" "gridIconTres" "textoIconTres"; }
-    .gridSecondSectionServicios h2 {
-      grid-area: h2; }
-    .gridSecondSectionServicios .textoPrincipal {
-      grid-area: textoPrincipal; }
-    .gridSecondSectionServicios .gridIconUno {
-      grid-area: gridIconUno; }
-    .gridSecondSectionServicios .textoIconUno {
-      grid-area: textoIconUno; }
-    .gridSecondSectionServicios .gridIconDos {
-      grid-area: gridIconDos; }
-    .gridSecondSectionServicios .textoIconDos {
-      grid-area: textoIconDos; }
-    .gridSecondSectionServicios .gridIconTres {
-      grid-area: gridIconTres; }
-    .gridSecondSectionServicios .textoIconTres {
-      grid-area: textoIconTres; }
-  .gridServiciosMQ {
-    grid-template-columns: auto;
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas: "h2" "gridImagesText"; }
-    .gridServiciosMQ h2 {
-      grid-area: h2; }
-    .gridServiciosMQ .gridImagesText {
-      grid-area: gridImagesText;
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: repeat(4, auto);
-      grid-template-areas: "gridImgServiciosUno" "gridTextUno" "gridImgServiciosDos" "gridTextDos"; }
-      .gridServiciosMQ .gridImagesText .gridImgServiciosUno {
-        grid-area: gridImgServiciosUno; }
-      .gridServiciosMQ .gridImagesText .gridTextUno {
-        grid-area: gridTextUno; }
-      .gridServiciosMQ .gridImagesText .gridImgServiciosDos {
-        grid-area: gridImgServiciosDos; }
-      .gridServiciosMQ .gridImagesText .gridTextDos {
-        grid-area: gridTextDos; }
   h1 {
     width: 100%; }
   .centerimgservicios {
@@ -808,4 +853,34 @@ section select {
     margin: 10%; }
   .centerimgicon {
     width: 60%;
-    margin: 0 20%; } }
+    margin: 0 20%; }
+  .flexselectbtn {
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+  .centerimg {
+    width: 80%;
+    margin: 10%; }
+  .select {
+    margin: 0; }
+  ul.flexUl {
+    margin: 10%;
+    width: 80%;
+    font-size: 2.1rem; }
+  ol.olDecoration {
+    font-size: 2.1rem;
+    width: 80%;
+    margin: 10%; }
+  p.centerp {
+    padding-bottom: 10%; }
+  .accountDecoration {
+    margin: auto;
+    width: 100%;
+    padding: 1rem; }
+  input.accountBtn {
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    padding: 7%;
+    text-align: center;
+    font-size: 2rem; } }
