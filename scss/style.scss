@@ -12,43 +12,79 @@ html{
 @import "header";
 @import "footer";
 @import "grids";
+//bucles
+@for $margin from 1 through 5{
+    .ml-#{$margin}{
+        margin-left: 10px * $margin;
+    }
+    .mr-#{$margin}{
+        margin-right: 10px * $margin;
+    }
+    .mt-#{$margin}{
+        margin-top: 10px * $margin;
+    }
+    .mb-#{$margin}{
+        margin-bottom: 10px * $margin;
+    }
+    .mx-#{$margin}{
+        margin-right: 10px * $margin;
+        margin-left: 10px * $margin;
+    }
+}
+@for $padding from 1 through 5{
+    .pl-#{$padding}{
+        margin-left: 10px * $padding;
+    }
+    .pr-#{$padding}{
+        margin-right: 10px * $padding;
+    }
+    .pt-#{$padding}{
+        margin-top: 10px * $padding;
+    }
+    .pb-#{$padding}{
+        margin-bottom: 10px * $padding;
+    }
+    .px-#{$padding}{
+        padding-left: 10px * $padding;
+        padding-right: 10px * $padding;
+    }
+    .py-#{$padding}{
+        padding-bottom: 10px * $padding;
+        padding-top: 10px * $padding;
+    }
+    .p-#{$padding}{
+        padding: 10px * $padding;
+    }
+}
+@for $fontsize from 1 through 20{
+    .fs-#{$fontsize}{
+        font-size: .2rem * $fontsize;
+    }
+}
+//mixin
+@mixin estilosGenerales($textalign, $height, $width){
+    text-align: $textalign;
+    height: $height;
+    width: $width;
+}
+//mapa
+$estilosgenerales: (
+    font-size: 4rem,
+    margin: 30px auto
+);
 // estilos generales
 .centerh1{
-    text-align: center;
-    font-size: 4rem;
-    margin: 30px auto;
-}
-h3{
-    font-size: 2.4rem;
-}
-p{
-    font-size: 1.8rem;
-}
-h2{
-    font-size: 2.8rem;
+    @include estilosGenerales(center, auto, auto);
+    font-size: map-get($estilosgenerales, font-size);
+    margin:  map-get($estilosgenerales, margin);
 }
 // estilos index
-.textoPrincipal{
-    h1{
-        padding: 50px;
-        font-size: 3rem;
-    }
-    p{
-        padding-left: 50px;
-        padding-right: 35px;
-        padding-top: 15px;
-    }
-} 
 .centerh3{
-    text-align: center;
-    padding: 30px;
-    font-size: 2rem;
+    @include estilosGenerales(center, auto, auto);
 }
 .textVideo{
-    width: auto;
-    height: 300px;
+    @include estilosGenerales(justify, 300px, auto);
     background-color: $colorPatito;
-    padding: 30px 40px;
     transition: all 2s linear;
     &:hover{
         background-color: $colorPrimario;
@@ -60,10 +96,8 @@ h2{
 }
 .textDecoration{
     height: auto;
-    padding: 30px 50px;
     background-color: $colorBlanco;
     color: $colorNegro;
-    font-size: 3rem;
 }
 .gridThirthSection p {
     background: linear-gradient(
@@ -86,7 +120,7 @@ h2{
     flex-direction: column;
 }
 .border{
-    border: solid 1px black;
+    border: solid 1px $colorNegro;
 }
 .linksDecoration a{
     text-decoration: none;
@@ -99,17 +133,13 @@ h2{
     background: #3c3939;
     color: #fff;
     border-radius: 10px;
-    margin-left: 50px;
     transition: all .4s ease-in-out;
 }
 input[type="button"]{
-    width: 150px;
-    height: 50px;
+    @include estilosGenerales(center, 50px, 150px);
     background: #3c3939;
     color: #fff;
     border-radius: 15px;
-    padding: 10px 30px;
-    margin: 20px 50px;
     transition: all .4s ease-in-out;
     &:hover{
         background: $colorNegro;
@@ -178,14 +208,12 @@ input[type="button"]{
     background-size: cover;
 }
 .account-input{
-    padding: 10px;
     outline: none;
     border: solid 1px $colorBlanco;
     color: $colorBlanco;
     background: #e1d3d323;
     font-size: 2rem;
     border-radius: 7px;
-    margin: 30px;
     &::placeholder{
         color: $colorBlanco;
     }
@@ -196,7 +224,6 @@ input[type="button"]{
     font-weight: 500;
 }
 .accountBtn{
-    padding: 10px 20px;
     color: none;
     outline: $colorBlanco;
     background: #7f7c7c2e;
@@ -205,32 +232,22 @@ input[type="button"]{
     color: $colorBlanco;
     border-radius: 5px;
     font-weight: bold;
-    margin: 10px 50px;
 }
 .accountDecoration{
-    & h1{
-        font-size: 4rem;
-        padding: 30px 50px;
-    }
     & a{
         text-decoration: none;
         color: $colorBlanco;
-        font-size: 2rem;
-        padding: 0 50px;
         &:hover{
             color: $colorNegro;
             text-decoration: underline;
         }
     }
     & h2{
-        font-size: 3rem;
-        padding: 30px 50px;
         color: $colorBlanco;
         font-weight: bold;
     }
 }
 .displayInput{
-    padding: 10px 50px;
     color: $colorBlanco;
 }
 .gender-datails .gender-title{
@@ -241,22 +258,13 @@ input[type="button"]{
 }
 .checkboxDecoration{
     color: $colorBlanco;
-    font-size: 1.5rem;
-    padding: 10px 50px;
-    margin-top: 55px;
-}
-form .user-details .input-box label{
-    font-size: 2.5rem;
-}
-label.form-input{
-    font-size: 2.5rem;
 }
 //estilos para productos
 section select{
     font-size: 1.5rem;
     padding: 16px 24px;
-    background: #3c3939;
-    color: #fff;
+    background: $colorSecundario;
+    color: $colorBlanco;
     border-radius: 10px;
     margin-left: 50px;
     transition: all 2s ease-in;
@@ -306,6 +314,9 @@ section select{
         margin-left: 35px;
         margin-bottom: 20px;
     }
+    .textVideo{
+        height: 300px;
+    }
     //estilos para servicios
     .p35{
         padding: 35px;
@@ -326,8 +337,7 @@ section select{
         margin-top: auto;
     }
     .centerimgservicios{
-        margin: 10%;
-        width: 80%;
+        @extend .centerimg;
     }
     .centerimgicon{
         width: 50%;
@@ -335,24 +345,23 @@ section select{
     }
     //estilos para giftcard
     //flexbox en giftcard
-    .flextextgiftcard{
+    @mixin flexcenter{
         display: flex;
         align-items: center;
+    }
+    .flextextgiftcard{
+        @include flexcenter;
         flex-direction: column;
         margin: 15px 100px 30px 20px;
     }
     .flexselectbtn{
-        display: flex;
+        @include flexcenter;
         flex-direction: row;
-        align-items: center;
     }
     //fin flexbox en giftcard
     .transformgiftcard {
         transform: translateX(42px) skew(-16deg, 11deg);
         box-shadow: -30px -13px 17px 4px rgba(0, 0, 0, 0.3);
-    }
-    .m-40{
-        margin: 40px;
     }
     main section div{
         p{
@@ -387,14 +396,12 @@ section select{
         justify-content: space-between;
     }
     .gender-datails{
-        display: flex;
+        @include flexcenter;
         justify-content: space-between;
-        align-items: center;
     }
     .flexcheckbox{
-        display: flex;
+        @include flexcenter;
         justify-content: space-between;
-        align-items: center;
     }
     //fin flexbox en micuenta
     .boxglass {
@@ -404,12 +411,6 @@ section select{
         inset 0px -10px 36px 0px rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
-    }
-    .m-30{
-        margin: 30px;
-    }
-    .p-10{
-        padding: 10px;
     }
     form .user-details .input-box{
         width: calc(100% / 2 - 20px);
@@ -440,6 +441,10 @@ section select{
 }
 // estilos para mobile
 @media screen and (max-width: 768px) {
+    .w80p10{
+        width: 80%;
+        padding: 10%;
+    }
     .flexmediaquerie{
         display: flex;
         flex-direction: column;
@@ -455,8 +460,7 @@ section select{
         width: 80%;
     }
     div.textVideo{
-        padding: 10%;
-        width: 80%;
+        @extend .w80p10;
         height: auto;
         background-color: $colorPrimario;
     }
@@ -464,16 +468,18 @@ section select{
         margin: 0 auto 5px 20px;
         padding: 5%;
     }
-    section.gridThirthSection img{
+    .w80m510{
         width: 80%;
         margin: 5% 10%;
+    }
+    section.gridThirthSection img{
+        @extend .w80m510;
     }
     //estilos PRODUCTOS
-    div.centerimg.pbottom img{
-        width: 80%;
-        margin: 5% 10%;
+    div.pbottom img{
+        @extend .w80m510;
     }
-    div.centerimg.pbottom h3,p{
+    div.pbottom h3,p{
         width: 80%;
         padding: 2% 10%;
     }
@@ -551,10 +557,9 @@ section select{
         padding: 1rem;
     }
     input.accountBtn{
-        width: 80%;
+        @extend .w80p10;
         margin-right: 10%;
         margin-left: 10%;
-        padding: 7%;
         text-align: center;
         font-size: 2rem;
     }

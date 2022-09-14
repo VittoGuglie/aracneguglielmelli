@@ -56,6 +56,9 @@ footer {
 //estilos para mobile
 @media screen and (max-width: 768px) {
     footer {
+        & .contactDecoration{
+            padding: 10px 20px;
+        }
         & input[type="submit"] {
             position: relative;
             border-radius: 0 0 8px 8px;

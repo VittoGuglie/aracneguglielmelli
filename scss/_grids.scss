@@ -24,10 +24,10 @@ div.gridContainer{
         display: grid;
         grid-template-areas:
         "imagenPrincipal textoPrincipal";
-        & .imagenPrincipal{
+        .imagenPrincipal{
             grid-area: imagenPrincipal;
         }
-        & .textoPrincipal{
+        .textoPrincipal{
             grid-area: textoPrincipal;
         }
     }
@@ -36,16 +36,16 @@ div.gridContainer{
         grid-template-areas: 
         "h2 h2 h2"
         "gridMainVideo gridMainSecondVideo gridMainThirthVideo";
-        & h2{
+        h2{
             grid-area: h2;
         }
-        & .gridMainVideo{
+        .gridMainVideo{
             grid-area: gridMainVideo;
         }
-        & .gridMainSecondVideo{
+        .gridMainSecondVideo{
             grid-area: gridMainSecondVideo;
         }
-        & .gridMainThirthVideo{
+        .gridMainThirthVideo{
             grid-area: gridMainThirthVideo;
         }
     }
@@ -55,19 +55,19 @@ div.gridContainer{
         "h2 h2 h2"
         "imgGridIzq imgGridCentro imgGridDer"
         "p p p";
-        & h2{
+        h2{
             grid-area: h2;
         }
-        & .imgGridIzq{
+        .imgGridIzq{
             grid-area: imgGridIzq;
         }
-        & .imgGridCentro{
+        .imgGridCentro{
             grid-area: imgGridCentro;
         }
-        & .imgGridDer{
+        .imgGridDer{
             grid-area: imgGridDer;
         }
-        & p{
+        p{
             grid-area: p;
         }
     }
@@ -262,7 +262,7 @@ div.gridContainer{
     //fin grid en productos
 }
 //grid mobile
-@media screen and (min-width: 768px){
+@media screen and (max-width: 768px){
     // grid index
     .gridFirstSection{
         display: grid;
@@ -270,10 +270,10 @@ div.gridContainer{
         grid-template-rows: auto auto;
         grid-template-areas: "imagenPrincipal"
         "textoPrincipal";
-        & .imagenPrincipal{
+        .imagenPrincipal{
             grid-area: imagenPrincipal;
         }
-        & .textoPrincipal{
+        .textoPrincipal{
             grid-area: textoPrincipal;
         }
     }
@@ -285,16 +285,16 @@ div.gridContainer{
         "gridMainVideo"
         "gridMainSecondVideo"
         "gridMainThirthVideo";
-        & h2{
+        h2{
             grid-area: h2;
         }
-        & .gridMainVideo{
+        .gridMainVideo{
             grid-area: gridMainVideo;
         }
-        & .gridMainSecondVideo{
+        .gridMainSecondVideo{
             grid-area: gridMainSecondVideo;
         }
-        & .gridMainThirthVideo{
+        .gridMainThirthVideo{
             grid-area: gridMainThirthVideo;
         }
     }
@@ -307,19 +307,19 @@ div.gridContainer{
         "imgGridCentro"
         "imgGridDer"
         "p";
-        & h2{
+        h2{
             grid-area: h2;
         }
-        & .imgGridIzq{
+        .imgGridIzq{
             grid-area: imgGridIzq;
         }
-        & .imgGridCentro{
+        .imgGridCentro{
             grid-area: imgGridCentro;
         }
-        & .imgGridDer{
+        .imgGridDer{
             grid-area: imgGridDer;
         }
-        & p{
+        p{
             grid-area: p;
         }
     }
