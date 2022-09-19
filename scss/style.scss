@@ -88,6 +88,7 @@ $estilosgenerales: (
     transition: all 2s linear;
     &:hover{
         background-color: $colorPrimario;
+        color: white;
         cursor: pointer;
     }
 }
@@ -188,6 +189,12 @@ input[type="button"]{
 }
 .highlightme{
     background-color: $colorPatito;
+}
+.fontSize-fontWeight{
+    font-size: 3rem;
+    font-weight: bold;
+    width: 90%;
+    margin: auto;
 }
 //estilos para micuenta
 .displayInput{
@@ -315,17 +322,11 @@ section select{
         margin-bottom: 20px;
     }
     .textVideo{
-        height: 300px;
+        height: 430px;
     }
     //estilos para servicios
     .p35{
         padding: 35px;
-    }
-    .fontSize-fontWeight{
-        font-size: 3rem;
-        font-weight: bold;
-        width: 90%;
-        margin: auto;
     }
     .textPadding{
         padding: 5px 50px 40px 50px;
@@ -552,15 +553,30 @@ section select{
     }
     //estilos para MICUENTA
     .accountDecoration{
-        margin: auto;
         width: 100%;
         padding: 1rem;
     }
     input.accountBtn{
-        @extend .w80p10;
+        border-radius: 20px;
+        padding: 5%;
+        width: 80%;
         margin-right: 10%;
         margin-left: 10%;
+        margin-top: 10px;
+        margin-bottom: 15px;
         text-align: center;
         font-size: 2rem;
+    }
+    .user-details .input-box input{
+        height: 35px;
+        width: 80%;
+        margin: 1rem 10%;
+        transition: all 0.3s ease;
+        &:focus{
+            border-bottom-width: 3px;
+        }
+    }
+    .accountBtn:hover{
+        background: $colorNegro;
     }
 }

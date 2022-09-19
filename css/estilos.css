@@ -141,37 +141,6 @@ div.gridContainer {
     grid-area: footer; }
 
 @media screen and (min-width: 1024px) {
-  .gridFirstSection {
-    display: grid;
-    grid-template-areas: "imagenPrincipal textoPrincipal"; }
-    .gridFirstSection .imagenPrincipal {
-      grid-area: imagenPrincipal; }
-    .gridFirstSection .textoPrincipal {
-      grid-area: textoPrincipal; }
-  .gridSecondSection {
-    display: grid;
-    grid-template-areas: "h2 h2 h2" "gridMainVideo gridMainSecondVideo gridMainThirthVideo"; }
-    .gridSecondSection h2 {
-      grid-area: h2; }
-    .gridSecondSection .gridMainVideo {
-      grid-area: gridMainVideo; }
-    .gridSecondSection .gridMainSecondVideo {
-      grid-area: gridMainSecondVideo; }
-    .gridSecondSection .gridMainThirthVideo {
-      grid-area: gridMainThirthVideo; }
-  .gridThirthSection {
-    display: grid;
-    grid-template-areas: "h2 h2 h2" "imgGridIzq imgGridCentro imgGridDer" "p p p"; }
-    .gridThirthSection h2 {
-      grid-area: h2; }
-    .gridThirthSection .imgGridIzq {
-      grid-area: imgGridIzq; }
-    .gridThirthSection .imgGridCentro {
-      grid-area: imgGridCentro; }
-    .gridThirthSection .imgGridDer {
-      grid-area: imgGridDer; }
-    .gridThirthSection p {
-      grid-area: p; }
   .gridTextImage {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -259,99 +228,9 @@ div.gridContainer {
     .gridAccountColumns h2 {
       grid-area: h2; }
     .gridAccountColumns form {
-      grid-area: form; }
-  .gridGaleria {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "h1 h1 h1" "gridTextProductos gridTextProductos gridTextProductos" "productoUno productoDos productoTres" "productoCuatro productoCinco productoSeis" "productoSiete productoOcho productoNueve"; }
-    .gridGaleria h1 {
-      grid-area: h1; }
-    .gridGaleria .gridTextProductos {
-      grid-area: gridTextProductos; }
-    .gridGaleria .productoUno {
-      grid-area: productoUno; }
-    .gridGaleria .productoDos {
-      grid-area: productoDos; }
-    .gridGaleria .productoTres {
-      grid-area: productoTres; }
-    .gridGaleria .productoCuatro {
-      grid-area: productoCuatro; }
-    .gridGaleria .productoCinco {
-      grid-area: productoCinco; }
-    .gridGaleria .productoSeis {
-      grid-area: productoSeis; }
-    .gridGaleria .productoSiete {
-      grid-area: productoSiete; }
-    .gridGaleria .productoOcho {
-      grid-area: productoOcho; }
-    .gridGaleria .productoNueve {
-      grid-area: productoNueve; } }
+      grid-area: form; } }
 
 @media screen and (max-width: 768px) {
-  .gridFirstSection {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-    grid-template-areas: "imagenPrincipal" "textoPrincipal"; }
-    .gridFirstSection .imagenPrincipal {
-      grid-area: imagenPrincipal; }
-    .gridFirstSection .textoPrincipal {
-      grid-area: textoPrincipal; }
-  .gridSecondSection {
-    display: grid;
-    grid-template-rows: repeat(4, auto);
-    grid-template-columns: auto;
-    grid-template-areas: "h2" "gridMainVideo" "gridMainSecondVideo" "gridMainThirthVideo"; }
-    .gridSecondSection h2 {
-      grid-area: h2; }
-    .gridSecondSection .gridMainVideo {
-      grid-area: gridMainVideo; }
-    .gridSecondSection .gridMainSecondVideo {
-      grid-area: gridMainSecondVideo; }
-    .gridSecondSection .gridMainThirthVideo {
-      grid-area: gridMainThirthVideo; }
-  .gridThirthSection {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(5, auto);
-    grid-template-areas: "h2" "imgGridIzq" "imgGridCentro" "imgGridDer" "p"; }
-    .gridThirthSection h2 {
-      grid-area: h2; }
-    .gridThirthSection .imgGridIzq {
-      grid-area: imgGridIzq; }
-    .gridThirthSection .imgGridCentro {
-      grid-area: imgGridCentro; }
-    .gridThirthSection .imgGridDer {
-      grid-area: imgGridDer; }
-    .gridThirthSection p {
-      grid-area: p; }
-  .gridGaleria {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(11, auto);
-    grid-template-areas: "h1" "gridTextProductos" "productoUno" "productoDos" "productoTres" "productoCuatro"  "productoCinco"  "productoSeis" "productoSiete"  "productoOcho"  "productoNueve"; }
-    .gridGaleria h1 {
-      grid-area: h1; }
-    .gridGaleria .gridTextProductos {
-      grid-area: gridTextProductos; }
-    .gridGaleria .productoUno {
-      grid-area: productoUno; }
-    .gridGaleria .productoDos {
-      grid-area: productoDos; }
-    .gridGaleria .productoTres {
-      grid-area: productoTres; }
-    .gridGaleria .productoCuatro {
-      grid-area: productoCuatro; }
-    .gridGaleria .productoCinco {
-      grid-area: productoCinco; }
-    .gridGaleria .productoSeis {
-      grid-area: productoSeis; }
-    .gridGaleria .productoSiete {
-      grid-area: productoSiete; }
-    .gridGaleria .productoOcho {
-      grid-area: productoOcho; }
-    .gridGaleria .productoNueve {
-      grid-area: productoNueve; }
   .gridTextImage {
     display: grid;
     grid-template-rows: repeat(3, auto);
@@ -721,6 +600,7 @@ div.gridContainer {
   transition: all 2s linear; }
   .textVideo:hover {
     background-color: #920707;
+    color: white;
     cursor: pointer; }
 
 .color {
@@ -815,6 +695,12 @@ input[type="button"] {
 
 .highlightme {
   background-color: #f3c12d; }
+
+.fontSize-fontWeight {
+  font-size: 3rem;
+  font-weight: bold;
+  width: 90%;
+  margin: auto; }
 
 .displayInput {
   display: flex;
@@ -922,14 +808,9 @@ section select {
     margin-left: 35px;
     margin-bottom: 20px; }
   .textVideo {
-    height: 300px; }
+    height: 430px; }
   .p35 {
     padding: 35px; }
-  .fontSize-fontWeight {
-    font-size: 3rem;
-    font-weight: bold;
-    width: 90%;
-    margin: auto; }
   .textPadding {
     padding: 5px 50px 40px 50px; }
   .icondecoration {
@@ -1006,7 +887,7 @@ section select {
       transform: translateY(-15px); } }
 
 @media screen and (max-width: 768px) {
-  .w80p10, div.textVideo, input.accountBtn {
+  .w80p10, div.textVideo {
     width: 80%;
     padding: 10%; }
   .flexmediaquerie {
@@ -1080,11 +961,24 @@ section select {
   p.centerp {
     padding-bottom: 10%; }
   .accountDecoration {
-    margin: auto;
     width: 100%;
     padding: 1rem; }
   input.accountBtn {
+    border-radius: 20px;
+    padding: 5%;
+    width: 80%;
     margin-right: 10%;
     margin-left: 10%;
+    margin-top: 10px;
+    margin-bottom: 15px;
     text-align: center;
-    font-size: 2rem; } }
+    font-size: 2rem; }
+  .user-details .input-box input {
+    height: 35px;
+    width: 80%;
+    margin: 1rem 10%;
+    transition: all 0.3s ease; }
+    .user-details .input-box input:focus {
+      border-bottom-width: 3px; }
+  .accountBtn:hover {
+    background: #000; } }

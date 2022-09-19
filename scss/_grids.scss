@@ -19,59 +19,6 @@ div.gridContainer{
 }
 //grid desktop
 @media screen and (min-width: 1024px){
-    //grid index
-    .gridFirstSection{
-        display: grid;
-        grid-template-areas:
-        "imagenPrincipal textoPrincipal";
-        .imagenPrincipal{
-            grid-area: imagenPrincipal;
-        }
-        .textoPrincipal{
-            grid-area: textoPrincipal;
-        }
-    }
-    .gridSecondSection{
-        display: grid;
-        grid-template-areas: 
-        "h2 h2 h2"
-        "gridMainVideo gridMainSecondVideo gridMainThirthVideo";
-        h2{
-            grid-area: h2;
-        }
-        .gridMainVideo{
-            grid-area: gridMainVideo;
-        }
-        .gridMainSecondVideo{
-            grid-area: gridMainSecondVideo;
-        }
-        .gridMainThirthVideo{
-            grid-area: gridMainThirthVideo;
-        }
-    }
-    .gridThirthSection{
-        display: grid;
-        grid-template-areas: 
-        "h2 h2 h2"
-        "imgGridIzq imgGridCentro imgGridDer"
-        "p p p";
-        h2{
-            grid-area: h2;
-        }
-        .imgGridIzq{
-            grid-area: imgGridIzq;
-        }
-        .imgGridCentro{
-            grid-area: imgGridCentro;
-        }
-        .imgGridDer{
-            grid-area: imgGridDer;
-        }
-        p{
-            grid-area: p;
-        }
-    }
-    //fin grid index
     //grid en servicios
     .gridTextImage{
         display: grid;
@@ -140,6 +87,7 @@ div.gridContainer{
             grid-area: gridTextDos;
         }
     }
+    //fin grid en servicios
     //grid en giftcard
     .grid-content{
         display: grid;
@@ -188,6 +136,7 @@ div.gridContainer{
             grid-area: gridimgtres;
         }
     }
+    //fin grid en giftcard
     //grid en micuenta
     .gridMainAccount{
         display: grid;
@@ -215,167 +164,9 @@ div.gridContainer{
         }
     }
     //fin grid en micuenta
-    //grid en productos
-    .gridGaleria{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: 
-        "h1 h1 h1"
-        "gridTextProductos gridTextProductos gridTextProductos"
-        "productoUno productoDos productoTres"
-        "productoCuatro productoCinco productoSeis"
-        "productoSiete productoOcho productoNueve";
-        h1{
-            grid-area: h1;
-        }
-        .gridTextProductos{
-            grid-area: gridTextProductos;
-        }
-        .productoUno{
-            grid-area: productoUno;
-        }
-        .productoDos{
-            grid-area: productoDos;
-        }
-        .productoTres{
-            grid-area: productoTres;
-        }
-        .productoCuatro{
-            grid-area: productoCuatro;
-        }
-        .productoCinco{
-            grid-area: productoCinco;
-        }
-        .productoSeis{
-            grid-area: productoSeis;
-        }
-        .productoSiete{
-            grid-area: productoSiete;
-        }
-        .productoOcho{
-            grid-area: productoOcho;
-        }
-        .productoNueve{
-            grid-area: productoNueve;
-        }
-    }
-    //fin grid en productos
 }
 //grid mobile
 @media screen and (max-width: 768px){
-    // grid index
-    .gridFirstSection{
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto;
-        grid-template-areas: "imagenPrincipal"
-        "textoPrincipal";
-        .imagenPrincipal{
-            grid-area: imagenPrincipal;
-        }
-        .textoPrincipal{
-            grid-area: textoPrincipal;
-        }
-    }
-    .gridSecondSection{
-        display: grid;
-        grid-template-rows: repeat(4, auto);
-        grid-template-columns: auto;
-        grid-template-areas: "h2"
-        "gridMainVideo"
-        "gridMainSecondVideo"
-        "gridMainThirthVideo";
-        h2{
-            grid-area: h2;
-        }
-        .gridMainVideo{
-            grid-area: gridMainVideo;
-        }
-        .gridMainSecondVideo{
-            grid-area: gridMainSecondVideo;
-        }
-        .gridMainThirthVideo{
-            grid-area: gridMainThirthVideo;
-        }
-    }
-    .gridThirthSection{
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: repeat(5, auto);
-        grid-template-areas: "h2"
-        "imgGridIzq"
-        "imgGridCentro"
-        "imgGridDer"
-        "p";
-        h2{
-            grid-area: h2;
-        }
-        .imgGridIzq{
-            grid-area: imgGridIzq;
-        }
-        .imgGridCentro{
-            grid-area: imgGridCentro;
-        }
-        .imgGridDer{
-            grid-area: imgGridDer;
-        }
-        p{
-            grid-area: p;
-        }
-    }
-    // fin grid index
-    //grid en productos
-    .gridGaleria{
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: repeat(11, auto);
-        grid-template-areas: 
-        "h1"
-        "gridTextProductos"
-        "productoUno"
-        "productoDos"
-        "productoTres"
-        "productoCuatro" 
-        "productoCinco" 
-        "productoSeis"
-        "productoSiete" 
-        "productoOcho" 
-        "productoNueve";
-        h1{
-            grid-area: h1;
-        }
-        .gridTextProductos{
-            grid-area: gridTextProductos;
-        }
-        .productoUno{
-            grid-area: productoUno;
-        }
-        .productoDos{
-            grid-area: productoDos;
-        }
-        .productoTres{
-            grid-area: productoTres;
-        }
-        .productoCuatro{
-            grid-area: productoCuatro;
-        }
-        .productoCinco{
-            grid-area: productoCinco;
-        }
-        .productoSeis{
-            grid-area: productoSeis;
-        }
-        .productoSiete{
-            grid-area: productoSiete;
-        }
-        .productoOcho{
-            grid-area: productoOcho;
-        }
-        .productoNueve{
-            grid-area: productoNueve;
-        }
-    }
-    //fin grid productos
     //grid en servicios
     .gridTextImage{
         display: grid;
@@ -528,5 +319,4 @@ div.gridContainer{
         }
     }
     //fin grid en giftcard
-
 }
