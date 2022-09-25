@@ -873,6 +873,7 @@ section select {
   .user-details .input-box input {
     height: 35px;
     width: 80%;
+    margin: 7%;
     transition: all 0.3s ease; }
     .user-details .input-box input:focus {
       border-bottom-width: 3px; }
@@ -887,7 +888,7 @@ section select {
       transform: translateY(-15px); } }
 
 @media screen and (max-width: 768px) {
-  .w80p10, div.textVideo {
+  .w80p10 {
     width: 80%;
     padding: 10%; }
   .flexmediaquerie {
@@ -901,15 +902,23 @@ section select {
     margin: 3rem 10%;
     width: 80%; }
   div.textVideo {
+    padding: 10%;
+    width: 100%;
     height: auto;
-    background-color: #920707; }
+    background-color: #920707;
+    color: white; }
+    div.textVideo p {
+      text-align: center; }
+  .center768 {
+    text-align: center;
+    padding: 5%; }
   div.textoPrincipal p {
     margin: 0 auto 5px 20px;
     padding: 5%; }
   .w80m510, section.gridThirthSection img, div.pbottom img {
     width: 80%;
     margin: 5% 10%; }
-  div.pbottom h3, p {
+  .w80p210, div.pbottom h3, div.pbottom p {
     width: 80%;
     padding: 2% 10%; }
   p.centerText {
@@ -934,8 +943,7 @@ section select {
     padding: 0; }
   .bold {
     font-weight: bold;
-    padding-bottom: 10%;
-    font-size: 3rem; }
+    padding-bottom: 10%; }
   .textMargin {
     margin: 10%; }
   .centerimgicon {
@@ -976,7 +984,7 @@ section select {
   .user-details .input-box input {
     height: 35px;
     width: 80%;
-    margin: 1rem 10%;
+    margin: 1rem 5%;
     transition: all 0.3s ease; }
     .user-details .input-box input:focus {
       border-bottom-width: 3px; }

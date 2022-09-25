@@ -420,6 +420,7 @@ section select{
     .user-details .input-box input{
         height: 35px;
         width: 80%;
+        margin: 7%;
         transition: all 0.3s ease;
         &:focus{
             border-bottom-width: 3px;
@@ -461,9 +462,18 @@ section select{
         width: 80%;
     }
     div.textVideo{
-        @extend .w80p10;
+        padding: 10%;
+        width: 100%;
         height: auto;
         background-color: $colorPrimario;
+        color: white;
+        p{
+            text-align: center;
+        }
+    }
+    .center768{
+        text-align: center;
+        padding: 5%;
     }
     div.textoPrincipal p{
         margin: 0 auto 5px 20px;
@@ -480,9 +490,17 @@ section select{
     div.pbottom img{
         @extend .w80m510;
     }
-    div.pbottom h3,p{
+    .w80p210{
         width: 80%;
         padding: 2% 10%;
+    }
+    div.pbottom{
+        h3{
+            @extend .w80p210;
+        }
+        p{
+            @extend .w80p210;
+        }
     }
     p.centerText{
         text-align: center;
@@ -514,7 +532,6 @@ section select{
     .bold{
         font-weight: bold;
         padding-bottom: 10%;
-        font-size: 3rem;
     }
     .textMargin{
         margin: 10%;
@@ -570,7 +587,7 @@ section select{
     .user-details .input-box input{
         height: 35px;
         width: 80%;
-        margin: 1rem 10%;
+        margin: 1rem 5%;
         transition: all 0.3s ease;
         &:focus{
             border-bottom-width: 3px;
